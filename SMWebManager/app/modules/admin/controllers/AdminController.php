@@ -101,6 +101,51 @@ class AdminController extends ControllerBase
             
         }
         
+    }      
+    
+    public function adminlogsAction()
+    {
+        if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
+        {
+            
+        }
+        
+    }        
+    
+    public function asteroidsAction()
+    {
+        if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
+        {
+            
+        }
+        
+    }    
+
+    public function bountiesAction()
+    {
+        if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
+        {
+            
+        }
+        
+    }     
+    
+    public function killsAction()
+    {
+        if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
+        {
+            
+        }
+        
+    }        
+    
+    public function votesAction()
+    {
+        if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
+        {
+            
+        }
+        
     }        
     
     
