@@ -20,6 +20,7 @@ After installing project dependencies You need install web application configure
 
 npm install
 bower install
+php composer.phar install
 
 ```
 
@@ -39,6 +40,11 @@ In app's "/app/config/config.php" file in database connection section you should
 - SM server faliure reporting, and logging
 - keep everything in database (preferably MySQL)
 
+# Development Branch naming and usage
+
+Currently dev branch is dedicated to on-going developent and is considered much less stable than master branch which is dedicated to give more stable expirience in use of this software.
+
+For fixing particular issues there are branches containing fix for given issue (name of this branch is number if issue). 
 
 
 
