@@ -31,3 +31,4 @@ nbproject/*
 SMWebManager/public/js/vendor/*
 SMWebManager/node_modules/*
 SMWebManager/app/config/config.php
+SMWebManager/cache/*
