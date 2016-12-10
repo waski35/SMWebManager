@@ -85,7 +85,7 @@ class AdminController extends ControllerBase
         
     }    
     
-    public function smRanksAction()
+    public function smranksAction()
     {
         if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
         {
