@@ -1,0 +1,17 @@
+{
+    "name": "SMWebManager",
+    "description": "",
+    "version": "1.0.0",
+    "author" : [
+        {
+            "name" : "waski35",
+            "email" : "arma@48h.waw.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-phalcon": ">=3.0.3",
+        "swiftmailer/swiftmailer": "^5.4",
+        
+    }
+}

@@ -32,8 +32,11 @@ return new \Phalcon\Config([
     'user' => [
         'admin' => [
             'login' => 'admin',
-            'password' => 'secrest_admin_password'
-            
+            'password' => 'secret_admin_password',
+            'role' => 'USER_ROLE_SUPERADMIN'
+        ],
+        'guest' => [
+            'role' => 'USER_ROLE_GUEST'
         ]
                
     ],
