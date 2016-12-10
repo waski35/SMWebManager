@@ -1,5 +1,5 @@
 <?php
-namespace SMWebManager\Modules\Frontend\Controllers;
+namespace SMWebManager\Modules\Admin\Controllers;
 
 use Phalcon\Mvc\Controller;
 

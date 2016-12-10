@@ -27,9 +27,34 @@ return new \Phalcon\Config([
         // This allows the baseUri to be understand project paths that are not in the root directory
         // of the webpspace.  This will break if the public/index.php entry point is moved or
         // possibly if the web server rewrite rules are changed. This can also be set to a static path.
-        'baseUri'        => preg_replace('/public([\/\\\\])index.php$/', '', $_SERVER["PHP_SELF"]),
+        'baseUri'     =>  '/',
     ],
-
+    'user' => [
+        'admin' => [
+            'login' => 'admin',
+            'password' => 'secret_admin_password',
+            'role' => 'USER_ROLE_SUPERADMIN'
+        ],
+        'guest' => [
+            'role' => 'USER_ROLE_GUEST'
+        ]
+               
+    ],
+    
+    'permissions' => [
+        'USER_ROLE_SUPERADMIN' => [
+            'admin' => ['index'],
+            'index' => ['index', 'login','logout', 'notfound']
+            
+        ],
+        'USER_ROLE_GUEST' => [
+            'index' => ['index', 'login']
+        ]
+        
+        
+        
+    ],
+    
     /**
      * if true, then we print a new line at the end of each CLI execution
      *

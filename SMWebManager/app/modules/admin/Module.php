@@ -1,5 +1,5 @@
 <?php
-namespace SMWebManager\Modules\Frontend;
+namespace SMWebManager\Modules\Admin;
 
 use Phalcon\DiInterface;
 use Phalcon\Loader;
@@ -19,8 +19,8 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
 
         $loader->registerNamespaces([
-            'SMWebManager\Modules\Frontend\Controllers' => __DIR__ . '/controllers/',
-            'SMWebManager\Modules\Frontend\Models' => __DIR__ . '/models/',
+            'SMWebManager\Modules\Admin\Controllers' => __DIR__ . '/controllers/',
+            'SMWebManager\Modules\Admin\Models' => __DIR__ . '/models/',
         ]);
 
         $loader->register();
