@@ -2,7 +2,7 @@
 
 namespace SMWebManager\Modules\Admin\Controllers;
 
-class IndexController extends ControllerBase
+class AdminController extends ControllerBase
 {
     public function indexAction()
     {
@@ -106,8 +106,9 @@ class IndexController extends ControllerBase
     
     protected function checkAuth()
     {
-        $login = $this->session->auth->name;
-        $passMd5 = $this->session->auth->pass;
+        $auth = $this->session->get("auth");
+        $login = $auth['name'];
+        $passMd5 = $auth['pass'];
         
         if (md5($this->config->user->$login->password) == $passMd5)
         {

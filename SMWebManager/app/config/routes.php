@@ -14,6 +14,12 @@ $router->add('/admin/index', [
    'action' => 'index'
 ])->setName('admin-index');
 
+$router->add('/admin/login', [
+   'module' => 'admin',
+   'controller' => 'index',
+   'action' => 'login'
+])->setName('admin-login');
+
 $router->add('/admin/logout', [
    'module' => 'admin',
    'controller' => 'index',

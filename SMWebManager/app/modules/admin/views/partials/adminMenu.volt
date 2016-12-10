@@ -1,4 +1,4 @@
-{% extends "../admin/index.volt" %}
+
 
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -84,7 +84,7 @@
                         </li>
                         
                         <li class="divider"></li>
-                        <li>{{link_to(['for': 'index-logout'], 'Logout', 'class' : 'fa fa-sign-out fa-fw') }}
+                        <li>{{link_to(['for': 'admin-logout'], 'Logout', 'class' : 'fa fa-sign-out fa-fw') }}
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

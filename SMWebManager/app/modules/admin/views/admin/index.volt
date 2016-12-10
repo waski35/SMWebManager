@@ -1,12 +1,10 @@
-{% extends "../layout.volt" %}
-
-{% block content %}
+{% extends 'layout.volt' %}
     
-
+{% block content %}
     <div id="wrapper">
 
         <!-- Navigation -->
-            {{ partial('../partials/adminMenu')}}
+        {% include 'partials/adminMenu.volt' %}
 
         <div id="page-wrapper" style="min-height: 650px;">
             <div class="row">
@@ -556,5 +554,4 @@
 
     
     
-{% endblock %}
-
+ {% endblock %}

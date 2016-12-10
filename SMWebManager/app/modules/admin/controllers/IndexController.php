@@ -28,12 +28,11 @@ class IndexController extends ControllerBase
                     if ($this->config->user->$login->role == 'USER_ROLE_SUPERADMIN')
                     {
                         // user has perms to acces everything
-                        $user = [
-                            'auth' => [
+                        $user = array(
                                     'name' => $login, 
                                     'pass' => md5($password)
-                                ]
-                            ];
+                                );
+                        
                         
                                           
                     }
@@ -57,6 +56,10 @@ class IndexController extends ControllerBase
                 
                 
             }
+            else
+            {
+                $this->flash->error("invalid csrf token");
+            }
             
             
         }
@@ -75,6 +78,16 @@ class IndexController extends ControllerBase
     public function notfoundAction()
     {
         
+    }
+    protected function _registerSession($user)
+    {
+        $this->session->set(
+            "auth",
+            [
+                "name"   => $user['name'],
+                "pass" => $user['pass']
+            ]
+        );
     }
 
 }

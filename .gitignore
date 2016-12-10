@@ -3,3 +3,4 @@ nbproject/*
 SMWebManager/public/js/vendor/*
 SMWebManager/node_modules/*
 SMWebManager/cache/*
+SMWebManager/composer.phar

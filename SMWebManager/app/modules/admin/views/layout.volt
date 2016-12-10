@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            {% block content %}{% endblock %}
+            {% block content %} {% endblock %}
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         {{ javascript_include('js/vendor/jquery/dist/jquery.js') }}

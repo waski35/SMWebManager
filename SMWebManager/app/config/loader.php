@@ -16,7 +16,7 @@ $loader->registerNamespaces([
  * Register module classes
  */
 $loader->registerClasses([
-    'SMWebManager\Modules\admin\Module' => APP_PATH . '/modules/admin/Module.php',
+    'SMWebManager\Modules\Admin\Module' => APP_PATH . '/modules/admin/Module.php',
     'SMWebManager\Modules\Cli\Module'      => APP_PATH . '/modules/cli/Module.php'
 ]);
 

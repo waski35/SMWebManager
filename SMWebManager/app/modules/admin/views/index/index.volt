@@ -1,4 +1,4 @@
-{% extends "../layout.volt" %}
+{% extends "layout.volt" %}
 
 {% block content %}
     
@@ -9,8 +9,11 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        {{ form( for: 'admin-login', 'method': 'post')}}
+                        {{ form( ['for': 'admin-login'], 'method': 'post')}}
+                        
+
                             <fieldset>
+                                <input type="hidden" name="{{security.getTokenKey()}}" value="{{security.getToken()}}"/>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="login" name="login" autofocus="" type="text">
                                 </div>

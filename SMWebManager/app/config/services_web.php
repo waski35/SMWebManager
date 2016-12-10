@@ -58,6 +58,6 @@ $di->set('flash', function () {
 */
 $di->setShared('dispatcher', function() {
     $dispatcher = new Dispatcher();
-    $dispatcher->setDefaultNamespace('SMWebManager\Modules\admin\Controllers');
+    $dispatcher->setDefaultNamespace('SMWebManager\Modules\Admin\Controllers');
     return $dispatcher;
 });
