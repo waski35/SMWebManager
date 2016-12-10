@@ -1,10 +1,10 @@
-{% extends "../layout.volt" %}
+{% extends "layout.volt" %}
 
 {% block content %}
      <div id="wrapper">
 
         <!-- Navigation -->
-            {{ partial('../partials/adminMenu')}}
+            {{ partial('partials/adminMenu')}}
             
      </div>        
 
