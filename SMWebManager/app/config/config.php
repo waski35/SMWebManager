@@ -29,7 +29,29 @@ return new \Phalcon\Config([
         // possibly if the web server rewrite rules are changed. This can also be set to a static path.
         'baseUri'     =>  '/',
     ],
-
+    'user' => [
+        'admin' => [
+            'login' => 'admin',
+            'password' => 'secrest_admin_password'
+            
+        ]
+               
+    ],
+    
+    'permissions' => [
+        'USER_ROLE_SUPERADMIN' => [
+            'admin' => ['index'],
+            'index' => ['index', 'login','logout', 'notfound']
+            
+        ],
+        'USER_ROLE_GUEST' => [
+            'index' => ['index', 'login']
+        ]
+        
+        
+        
+    ],
+    
     /**
      * if true, then we print a new line at the end of each CLI execution
      *

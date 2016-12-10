@@ -9,6 +9,23 @@ class IndexController extends ControllerBase
     {
 
     }
+    
+    public function loginAction()
+    {
+        
+        
+        
+    }
+    
+    public function logoutAction()
+    {
+        
+    }
+    
+    public function notfoundAction()
+    {
+        
+    }
 
 }
 
