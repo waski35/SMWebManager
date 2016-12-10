@@ -1,6 +1,6 @@
 <?php
 
-namespace SMWebManager\Modules\Frontend\Controllers;
+namespace SMWebManager\Modules\Admin\Controllers;
 
 class IndexController extends ControllerBase
 {

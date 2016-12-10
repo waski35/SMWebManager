@@ -2,27 +2,20 @@
 
 $router = $di->getRouter();
 
-foreach ($application->getModules() as $key => $module) {
-    $namespace = preg_replace('/Module$/', 'Controllers', $module["className"]);
-    $router->add('/'.$key.'/:params', [
-        'namespace' => $namespace,
-        'module' => $key,
-        'controller' => 'index',
-        'action' => 'index',
-        'params' => 1
-    ])->setName($key);
-    $router->add('/'.$key.'/:controller/:params', [
-        'namespace' => $namespace,
-        'module' => $key,
-        'controller' => 1,
-        'action' => 'index',
-        'params' => 2
-    ]);
-    $router->add('/'.$key.'/:controller/:action/:params', [
-        'namespace' => $namespace,
-        'module' => $key,
-        'controller' => 1,
-        'action' => 2,
-        'params' => 3
-    ]);
-}
+$router->add('/', [
+   'module' => 'admin',
+   'controller' => 'index',
+   'action' => 'index'
+])->setName('index');
+
+$router->add('/admin/index', [
+   'module' => 'admin',
+   'controller' => 'admin',
+   'action' => 'index'
+])->setName('admin-index');
+
+$router->add('/admin/logout', [
+   'module' => 'admin',
+   'controller' => 'index',
+   'action' => 'logout'
+])->setName('admin-logout');

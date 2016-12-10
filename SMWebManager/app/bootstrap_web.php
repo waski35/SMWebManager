@@ -45,7 +45,7 @@ try {
      * Register application modules
      */
     $application->registerModules([
-        'frontend' => ['className' => 'SMWebManager\Modules\Frontend\Module'],
+        'frontend' => ['className' => 'SMWebManager\Modules\Admin\Module'],
     ]);
 
     /**
