@@ -12,7 +12,7 @@ This software is licensed under GNU GPL 2 license. For terms see : https://www.g
 - doomsider's shadow (with all its dependencies, working)
 
 - Apache 2.4
-- PHP 7.0
+- PHP 5.6
 - Phalcon 3.0.* PHP Framework
 - npm, nodejs (to install project javascript dependencies)
 
@@ -33,6 +33,10 @@ php composer.phar install
 In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
 
 
+# in Development
+- ability to show details about players, ships, stations, shops, asteroids on given list,
+- ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
+- add option for local/remote server install admin authorisation for performing above tasks,
 
 
 # Future plans
