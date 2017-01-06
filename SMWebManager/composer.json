@@ -1,6 +1,6 @@
 {
     "name": "SMWebManager",
-    "description": "",
+    "description": "Web management interface for starmade servers using doomsiders shadow, allows performing different commands on local server",
     "version": "1.0.0",
     "author" : [
         {
@@ -9,9 +9,9 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "ext-phalcon": ">=3.0.3",
-        "swiftmailer/swiftmailer": "^5.4"
+        "php": ">=5.5",
+        "ext-phalcon": ">=3.0.3"
+        
         
     }
 }

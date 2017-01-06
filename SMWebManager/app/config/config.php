@@ -6,54 +6,62 @@
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
-return new \Phalcon\Config([
+return new \Phalcon\Config(array(
     'version' => '1.0',
 
-    'database' => [
+    'database' => array(
         'adapter'  => 'Mysql',
         'host'     => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'dbname'   => 'SMWebManager',
+        'username' => 'dtsd',
+        'password' => 'dtsd',
+        'dbname'   => 'dtsddb',
         'charset'  => 'utf8',
-    ],
+    ),
 
-    'application' => [
+    'application' => array(
         'appDir'         => APP_PATH . '/',
         'modelsDir'      => APP_PATH . '/common/models/',
         'migrationsDir'  => APP_PATH . '/migrations/',
         'cacheDir'       => BASE_PATH . '/cache/',
+        
 
         // This allows the baseUri to be understand project paths that are not in the root directory
         // of the webpspace.  This will break if the public/index.php entry point is moved or
         // possibly if the web server rewrite rules are changed. This can also be set to a static path.
         'baseUri'     =>  '/',
-    ],
-    'user' => [
-        'admin' => [
+    ),
+    'user' => array(
+        'admin' => array(
             'login' => 'admin',
             'password' => 'secret_admin_password',
             'role' => 'USER_ROLE_SUPERADMIN'
-        ],
-        'guest' => [
+        ),
+        'guest' => array(
             'role' => 'USER_ROLE_GUEST'
-        ]
+        )
                
-    ],
+    ),
     
-    'permissions' => [
-        'USER_ROLE_SUPERADMIN' => [
-            'admin' => ['index'],
-            'index' => ['index', 'login','logout', 'notfound']
+    'permissions' => array(
+        'USER_ROLE_SUPERADMIN' => array(
+            'admin' => array('index', 'adminlogs', 'bounties', 'connections', 'destroylog', 'kills', 'logs', 'sectors', 'servermanage', 'serverstatus', 'smranks', 'votes', 'adminMenu'),
+            'index' => array('index', 'login','logout', 'notfound'),
+            'asteroid' => array('list', 'adminMenu'),
+            'player' => array('list', 'adminMenu'),
+            'ship' => array('list', 'adminMenu'),
+            'shop' => array('list', 'adminMenu'),
+            'station' => array('list', 'adminMenu')
             
-        ],
-        'USER_ROLE_GUEST' => [
-            'index' => ['index', 'login']
-        ]
+        ),
+        'USER_ROLE_GUEST' => array(
+            'index' => array('index', 'login', 'logout')
+        )
         
         
         
-    ],
+    ),
+    
+    'path_to_doomsiders_shadow' => 'enter_here_path_to_doomsiders_shadow_directory',
     
     /**
      * if true, then we print a new line at the end of each CLI execution
@@ -65,4 +73,4 @@ return new \Phalcon\Config([
      * You can disable this behaviour if the output of your application needs to don't have a new line at end
      */
     'printNewLine' => true
-]);
+));

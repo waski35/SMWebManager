@@ -8,11 +8,11 @@ class Kills extends Model
 {
     protected $line;
     
-    protected $killer;
+    protected $KILLER;
     
-    protected $killtime;
+    protected $KILLTIME;
     
-    protected $victim;
+    protected $VICTIM;
 
     
     public function initialize()
@@ -27,17 +27,17 @@ class Kills extends Model
     
     public function getKiller()
     {
-        return $this->killer;
+        return $this->KILLER;
     }
     
     public function getKillTime()
     {
-        return $this->killtime;
+        return $this->KILLTIME;
     }
     
     public function getVictim()
     {
-        return $this->victim;
+        return $this->VICTIM;
     }
     
     

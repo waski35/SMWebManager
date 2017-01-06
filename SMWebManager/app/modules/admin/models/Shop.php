@@ -8,9 +8,9 @@ class Shop extends Model
 {
     protected $line;
     
-    protected $currentsector;
+    protected $CURRENTSECTOR;
     
-    protected $name;
+    protected $NAME;
     
        
     public function initialize()
@@ -25,12 +25,12 @@ class Shop extends Model
     
     public function getCurrentSector()
     {
-        return $this->currentsector;
+        return $this->CURRENTSECTOR;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     

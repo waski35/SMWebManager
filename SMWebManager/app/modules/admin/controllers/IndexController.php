@@ -16,12 +16,14 @@ class IndexController extends ControllerBase
     
         if ($this->request->isPost())
         {
-            if ($this->security->checkToken()) 
-            {
+            //if ($this->security->checkToken()) 
+            //{
                 $login = $this->request->getPost('login');
                 $password = $this->request->getPost('password');
-            
-                if ($this->config->user->$login->login == $login && $this->config->user->$login->password == $password)
+                
+                
+                
+                if ($this->config->user->$login->password == $password)
                 {
                     // authenticated via config
                 
@@ -30,7 +32,7 @@ class IndexController extends ControllerBase
                         // user has perms to acces everything
                         $user = array(
                                     'name' => $login, 
-                                    'pass' => md5($password)
+                                    'role' => 'USER_ROLE_SUPERADMIN'
                                 );
                         
                         
@@ -38,13 +40,13 @@ class IndexController extends ControllerBase
                     }
                     else 
                     {
-                        $this->flash->warning("You don't have permissions to access admin panel.");
+                        $this->flashsession->warning("You don't have permissions to access admin panel.");
                     }
                 
                 }
                 else 
                 {
-                    $this->flash->warning("Login / Password incorrect !");
+                    $this->flashsession->warning("Login / Password incorrect !");
                 }
                 if ($user !== false) 
                 {
@@ -55,11 +57,11 @@ class IndexController extends ControllerBase
                 
                 
                 
-            }
-            else
-            {
-                $this->flash->error("invalid csrf token");
-            }
+            //}
+            //else
+            //{
+            //    $this->flashsession->error("invalid csrf token");
+            //}
             
             
         }
@@ -71,7 +73,7 @@ class IndexController extends ControllerBase
     {
         $this->session->destroy();
         $this->response->redirect(array("for" => "index"));
-        $this->flash->success("Logged off successfully");
+        $this->flashsession->success("Logged off successfully");
         
     }
     
@@ -83,10 +85,10 @@ class IndexController extends ControllerBase
     {
         $this->session->set(
             "auth",
-            [
+            array(
                 "name"   => $user['name'],
-                "pass" => $user['pass']
-            ]
+                "role" => $user['role']
+            )
         );
     }
 

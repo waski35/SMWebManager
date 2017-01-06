@@ -9,13 +9,13 @@ class ConnectionLog extends Model
 {
     protected $line;
     
-    protected $ip;
+    protected $IP;
     
-    protected $name;
+    protected $NAME;
     
-    protected $status;
+    protected $STATUS;
     
-    protected $time;
+    protected $TIME;
     
     public function initialize()
     {
@@ -29,22 +29,22 @@ class ConnectionLog extends Model
     
     public function getIp()
     {
-        return $this->ip;
+        return $this->IP;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getStatus()
     {
-        return $this->status;
+        return $this->STATUS;
     }
     
     public function getTime()
     {
-        return $this->time;
+        return $this->TIME;
     }
 }
 

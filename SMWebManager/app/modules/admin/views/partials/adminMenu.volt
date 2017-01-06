@@ -14,20 +14,7 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        {% for alert in alerts %}
-                            
-                            
-                            
-                        {% endfor %}    
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
+                
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -38,7 +25,7 @@
                         </li>
                         
                         <li class="divider"></li>
-                        <li>{{link_to(['for': 'admin-logout'], 'Logout', 'class' : 'fa fa-sign-out fa-fw') }}
+                        <li><a href="{{url(['for': 'admin-logout'])}}"><i class="fa fa-sign-out fa-fw"></i> Log Out</a> 
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -62,8 +49,62 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-index'], 'Home', 'class' : 'active fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-index'])}}"><i class="active fa fa-dashboard fa-fw"></i>Home</a>
                         </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-stations'])}}"><i class="fa fa-dashboard fa-fw"></i>Stations</a>
+                            
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-shops'])}}"><i class="fa fa-dashboard fa-fw"></i>Shops</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-ships'])}}"><i class="fa fa-dashboard fa-fw"></i>Ships</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-players'])}}"><i class="fa fa-dashboard fa-fw"></i>Players</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-asteroids'])}}"><i class="fa fa-dashboard fa-fw"></i>Asteroids</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-server-management'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Management</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-server-settings'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Settings</a>
+                        </li>
+                        <!-- logs -->
+                        <li>
+                            <a href="{{url(['for': 'admin-adminlogs'])}}"><i class="fa fa-dashboard fa-fw"></i>Admins Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-bounties'])}}"><i class="fa fa-dashboard fa-fw"></i>Bounty Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-connections'])}}"><i class="fa fa-dashboard fa-fw"></i>Connections Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-destroylog'])}}"><i class="fa fa-dashboard fa-fw"></i>Destroy Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-kills'])}}"><i class="fa fa-dashboard fa-fw"></i>Kills Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-logs'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-sectors'])}}"><i class="fa fa-dashboard fa-fw"></i>Sector Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-serverstatus'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Status Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-votes'])}}"><i class="fa fa-dashboard fa-fw"></i>Vote Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-smranks'])}}"><i class="fa fa-dashboard fa-fw"></i>Ranks Logs</a>
+                        </li>
+                        
                         <li>
                             
                             <!-- /.nav-second-level -->

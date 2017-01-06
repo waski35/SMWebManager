@@ -8,9 +8,9 @@ class Log extends Model
 {
     protected $line;
     
-    protected $logdate;
+    protected $LOGDATE;
     
-    protected $logstring;
+    protected $LOGSTRING;
 
     
     public function initialize()
@@ -25,12 +25,12 @@ class Log extends Model
     
     public function getLogDate()
     {
-        return $this->logdate;
+        return $this->LOGDATE;
     }
     
     public function getLogString()
     {
-        return $this->logstring;
+        return $this->LOGSTRING;
     }
     
     

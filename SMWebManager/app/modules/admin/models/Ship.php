@@ -7,29 +7,29 @@ class Ship extends Model
 {
     protected $line;
     
-    protected $attached;
+    protected $ATTACHED;
     
-    protected $block;
+    protected $BLOCK;
     
-    protected $creator;
+    protected $CREATOR;
     
-    protected $currentsector;
+    protected $CURRENTSECTOR;
     
-    protected $docked;
+    protected $DOCKED;
     
-    protected $entitytype;
+    protected $ENTITYTYPE;
     
-    protected $faction;
+    protected $FACTION;
     
-    protected $lastcontroller;
+    protected $LASTCONTROLLER;
     
-    protected $lastposition;
+    protected $LASTPOSITION;
     
-    protected $lastupdate;
+    protected $LASTUPDATE;
     
-    protected $mass;
+    protected $MASS;
     
-    protected $name;
+    protected $NAME;
     
 
     
@@ -45,62 +45,62 @@ class Ship extends Model
     
     public function getAttached()
     {
-        return $this->attached;
+        return $this->ATTACHED;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getBlock()
     {
-        return $this->block;
+        return $this->BLOCK;
     }
     
     public function getCreator()
     {
-        return $this->creator;
+        return $this->CREATOR;
     }
     
     public function getCurrentSector()
     {
-        return $this->currentsector;
+        return $this->CURRENTSECTOR;
     }
     
     public function getDocked()
     {
-        return $this->docked;
+        return $this->DOCKED;
     }
     
     public function getEntityType()
     {
-        return $this->entitytype;
+        return $this->ENTITYTYPE;
     }
     
     public function getFaction()
     {
-        return $this->faction;
+        return $this->FACTION;
     }
     
     public function getLastController()
     {
-        return $this->lastcontroller;
+        return $this->LASTCONTROLLER;
     }
     
     public function getLastPosition()
     {
-        return $this->lastposition;
+        return $this->LASTPOSITION;
     }
     
     public function getLastUpdate()
     {
-        return $this->lastupdate;
+        return $this->LASTUPDATE;
     }
     
     public function getMass()
     {
-        return $this->mass;
+        return $this->MASS;
     }
     
     

@@ -44,9 +44,9 @@ try {
     /**
      * Register application modules
      */
-    $application->registerModules([
-        'admin' => ['className' => 'SMWebManager\Modules\Admin\Module'],
-    ]);
+    $application->registerModules(array(
+        'admin' => array('className' => 'SMWebManager\Modules\Admin\Module'),
+    ));
 
     /**
      * Include routes

@@ -31,6 +31,7 @@ php composer.phar install
 # SMWM Configuration
 
 In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
+Also You should change default admin password for ore secure (default is 'secret_admin_password', login 'admin')
 
 
 # in Development

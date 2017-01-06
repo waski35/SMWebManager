@@ -8,12 +8,12 @@ class AdminLog extends Model
 {
     protected $line;
     
-    protected $command;
+    protected $COMMAND;
     
-    protected $name;
+    protected $NAME;
     
     
-    protected $time;
+    protected $TIME;
     
     public function initialize()
     {
@@ -27,18 +27,19 @@ class AdminLog extends Model
     
     public function getCommand()
     {
-        return $this->command;
+        return $this->COMMAND;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
        
     public function getTime()
     {
-        return $this->time;
+        return $this->TIME;
+;
     }
 }
 

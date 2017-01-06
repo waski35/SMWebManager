@@ -11,11 +11,7 @@
         {{ stylesheet_link('js/vendor/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css') }}
         {{ stylesheet_link('js/vendor/morrisjs/morris.css') }}
         {{ stylesheet_link('js/vendor/font-awesome/css/font-awesome.css') }}
-    </head>
-    <body>
-        <div class="container">
-            {% block content %} {% endblock %}
-        </div>
+        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         {{ javascript_include('js/vendor/jquery/dist/jquery.js') }}
         {{ javascript_include('js/vendor/bootstrap/dist/js/bootstrap.js') }}
@@ -23,5 +19,11 @@
         {{ javascript_include('js/vendor/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}
         {{ javascript_include('js/vendor/raphael/raphael.js') }}
         {{ javascript_include('js/vendor/morrisjs/morris.js') }}
+    </head>
+    <body>
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+        
     </body>
 </html>

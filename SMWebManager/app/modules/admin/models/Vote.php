@@ -8,11 +8,11 @@ class Vote extends Model
 {
     protected $line;
     
-    protected $info;
+    protected $INFO;
     
-    protected $name;
+    protected $NAME;
     
-    protected $time;
+    protected $TIME;
     
     public function initialize()
     {
@@ -26,18 +26,18 @@ class Vote extends Model
     
     public function getInfo()
     {
-        return $this->info;
+        return $this->INFO;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
         
     public function getTime()
     {
-        return $this->time;
+        return $this->TIME;
     }
 }
 

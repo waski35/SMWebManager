@@ -40,9 +40,9 @@ $console = new ConsoleApp($di);
 /**
  * Register console modules
  */
-$console->registerModules([
+$console->registerModules(array(
     'cli' => ['className' => 'SMWebManager\Modules\Cli\Module']
-]);
+));
 
 /**
  * Setup the arguments to use the 'cli' module

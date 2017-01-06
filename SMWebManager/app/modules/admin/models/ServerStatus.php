@@ -8,9 +8,9 @@ class ServerStatus extends Model
 {
     protected $line;
     
-    protected $status;
+    protected $STATUS;
     
-    protected $time;
+    protected $TIME;
     
     public function initialize()
     {
@@ -24,12 +24,12 @@ class ServerStatus extends Model
     
     public function getStatus()
     {
-        return $this->status;
+        return $this->STATUS;
     }
     
     public function getTime()
     {
-        return $this->time;
+        return $this->TIME;
     }
 }
 

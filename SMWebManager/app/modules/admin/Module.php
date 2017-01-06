@@ -18,10 +18,11 @@ class Module implements ModuleDefinitionInterface
     {
         $loader = new Loader();
 
-        $loader->registerNamespaces([
+        $loader->registerNamespaces(array(
             'SMWebManager\Modules\Admin\Controllers' => __DIR__ . '/controllers/',
             'SMWebManager\Modules\Admin\Models' => __DIR__ . '/models/',
-        ]);
+            'SMWebManager\Modules\Admin\Plugins'      => __DIR__ . '/plugins/',
+        ));
 
         $loader->register();
     }
@@ -41,10 +42,10 @@ class Module implements ModuleDefinitionInterface
             $view->setDI($this);
             $view->setViewsDir(__DIR__ . '/views/');
 
-            $view->registerEngines([
+            $view->registerEngines(array(
                 '.volt'  => 'voltShared',
                 '.phtml' => PhpEngine::class
-            ]);
+            ));
 
             return $view;
         });
