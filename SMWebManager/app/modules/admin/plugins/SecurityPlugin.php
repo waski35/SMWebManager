@@ -38,10 +38,10 @@ class SecurityPlugin extends Plugin
             );
 
             $dispatcher->forward(
-                [
+                array(
                     "controller" => "index",
                     "action"     => "index",
-                ]
+                )
             );
 
             // Returning "false" we tell to the dispatcher to stop the current operation
@@ -52,16 +52,14 @@ class SecurityPlugin extends Plugin
     protected function isAllowed($role, $controller, $action)
     {
         $config = $this->getDI()->get('config');
-        
-        foreach ($config->permissions->$role->$controller as $ctrl)
+        //var_dump($config->permissions->$role->$controller); die();
+        foreach ($config->permissions->$role->$controller as $val)
         {
-            foreach ($ctrl as $val)
-            {
-                if ($val == $action)
+              if ($val == $action)
                 {
                     return true;
                 }
-            }
+            
         }
         return false;
     }

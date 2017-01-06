@@ -13,7 +13,7 @@
                         
 
                             <fieldset>
-                                <input type="hidden" name="{{security.getTokenKey()}}" value="{{security.getToken()}}"/>
+                                
                                 <div class="form-group">
                                     <input class="form-control" placeholder="login" name="login" autofocus="" type="text">
                                 </div>

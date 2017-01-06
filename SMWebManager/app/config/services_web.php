@@ -9,6 +9,7 @@ use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Flash\Direct as Flash;
 use Phalcon\Flash\Session as FlashSession;
 use Phalcon\Events\Manager as EventsManager;
+use SMWebManager\Modules\Admin\Plugins\SecurityPlugin as SecurityPlugin;
 
 /**
  * Registering a router
@@ -82,15 +83,16 @@ $di->setShared( "dispatcher",
         );
 
         // Handle exceptions and not-found exceptions using NotFoundPlugin
-        $eventsManager->attach(
-            "dispatch:beforeException",
-            new NotFoundPlugin()
-        );
+        //$eventsManager->attach(
+        //    "dispatch:beforeException",
+        //    new NotFoundPlugin()
+        //);
 
         $dispatcher = new Dispatcher();
 
         // Assign the events manager to the dispatcher
         $dispatcher->setEventsManager($eventsManager);
-
+        
+        $dispatcher->setDefaultNamespace('SMWebManager\Modules\Admin\Controllers');
         return $dispatcher;
 });

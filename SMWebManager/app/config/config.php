@@ -13,7 +13,7 @@ return new \Phalcon\Config(array(
         'adapter'  => 'Mysql',
         'host'     => 'localhost',
         'username' => 'dtsd',
-        'password' => 'password',
+        'password' => 'dtsd',
         'dbname'   => 'dtsddb',
         'charset'  => 'utf8',
     ),

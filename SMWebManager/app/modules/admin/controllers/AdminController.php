@@ -20,23 +20,25 @@ class AdminController extends ControllerBase
     {
         
             $destroyLogs = DestroyLog::find(array(
-                "order" => "destroytime",
+                "order" => "DESTROYTIME DESC",
                 "limit" => 10,
             ));
             
             $lastAdmin = Player::find(array(
-                "order" => "online",
-                "conditions" => "rank = Admiral",
-                "limit" => 1,
+                "order" => "LASTUPDATE DESC",
+                "conditions" => "RANK LIKE 'Admiral'",
+                
             ));
             
+            $dateMonthAgo = date('Y-m-d', strtotime('-30 days'));
+            $dateToday = date('Y-m-d');
             $votesLastMonth = Vote::find(array(
-                "conditions" => "time BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()"
+                "conditions" => "TIME > '".$dateMonthAgo."'"
                 
             ));
             
             $playersLastMonth = Player::find(array(
-                "conditions" => "online BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()"
+                "conditions" => "LASTUPDATE > '".$dateMonthAgo."'"
                 
             ));
             

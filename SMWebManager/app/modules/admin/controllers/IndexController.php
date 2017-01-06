@@ -16,14 +16,14 @@ class IndexController extends ControllerBase
     
         if ($this->request->isPost())
         {
-            if ($this->security->checkToken()) 
-            {
+            //if ($this->security->checkToken()) 
+            //{
                 $login = $this->request->getPost('login');
                 $password = $this->request->getPost('password');
                 
-                $user = false;
-            
-                if ($this->config->user->$login->login == $login && $this->config->user->$login->password == md5($password))
+                
+                
+                if ($this->config->user->$login->password == $password)
                 {
                     // authenticated via config
                 
@@ -32,7 +32,6 @@ class IndexController extends ControllerBase
                         // user has perms to acces everything
                         $user = array(
                                     'name' => $login, 
-                                    'pass' => md5($password),
                                     'role' => 'USER_ROLE_SUPERADMIN'
                                 );
                         
@@ -58,11 +57,11 @@ class IndexController extends ControllerBase
                 
                 
                 
-            }
-            else
-            {
-                $this->flashsession->error("invalid csrf token");
-            }
+            //}
+            //else
+            //{
+            //    $this->flashsession->error("invalid csrf token");
+            //}
             
             
         }
@@ -88,7 +87,6 @@ class IndexController extends ControllerBase
             "auth",
             array(
                 "name"   => $user['name'],
-                "pass" => $user['pass'],
                 "role" => $user['role']
             )
         );

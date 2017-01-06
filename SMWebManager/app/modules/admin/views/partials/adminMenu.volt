@@ -25,7 +25,7 @@
                         </li>
                         
                         <li class="divider"></li>
-                        <li>{{link_to(['for': 'admin-logout'], 'Logout', 'class' : 'fa fa-sign-out fa-fw') }}
+                        <li><a href="{{url(['for': 'admin-logout'])}}"><i class="fa fa-sign-out fa-fw"></i> Log Out</a> 
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -49,26 +49,26 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-index'], 'Home', 'class' : 'active fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-index'])}}"><i class="active fa fa-dashboard fa-fw"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-stations'])}}"><i class="fa fa-dashboard fa-fw"></i>Stations</a>
                             
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-stations'], 'Stations', 'class' : ' fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-shops'])}}"><i class="fa fa-dashboard fa-fw"></i>Shops</a>
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-shops'], 'Shops', 'class' : ' fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-ships'])}}"><i class="fa fa-dashboard fa-fw"></i>Ships</a>
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-ships'], 'Ships', 'class' : ' fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-players'])}}"><i class="fa fa-dashboard fa-fw"></i>Players</a>
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-players'], 'Players', 'class' : ' fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-asteroids'])}}"><i class="fa fa-dashboard fa-fw"></i>Asteroids</a>
                         </li>
                         <li>
-                            {{link_to(['for': 'admin-asteroids'], 'Asteroids', 'class' : ' fa fa-dashboard fa-fw') }}
-                        </li>
-                        <li>
-                            {{link_to(['for': 'admin-server-management'], 'Server Management', 'class' : ' fa fa-dashboard fa-fw') }}
+                            <a href="{{url(['for': 'admin-server-management'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Management</a>
                         </li>
                         
                         <li>

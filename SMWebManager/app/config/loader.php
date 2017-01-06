@@ -9,7 +9,7 @@ $loader = new Loader();
  */
 $loader->registerNamespaces(array(
     'SMWebManager\Models' => APP_PATH . '/common/models/',
-    'SMWebManager'        => APP_PATH . '/common/library/',
+    'SMWebManager\Library'        => APP_PATH . '/common/library/',
     
 ));
 
