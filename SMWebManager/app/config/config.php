@@ -44,7 +44,7 @@ return new \Phalcon\Config(array(
     
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
-            'admin' => array('index', 'adminlogs', 'bounties', 'connections', 'destroylog', 'kills', 'logs', 'sectors', 'servermanage', 'serverstatus', 'smRanks', 'votes', 'adminMenu'),
+            'admin' => array('index', 'adminlogs', 'bounties', 'connections', 'destroylog', 'kills', 'logs', 'sectors', 'servermanage', 'serverstatus', 'smranks', 'votes', 'adminMenu'),
             'index' => array('index', 'login','logout', 'notfound'),
             'asteroid' => array('list', 'adminMenu'),
             'player' => array('list', 'adminMenu'),

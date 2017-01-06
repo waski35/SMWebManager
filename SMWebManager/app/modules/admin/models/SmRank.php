@@ -24,7 +24,7 @@ class SmRank extends Model
         return $this->line;
     }
     
-    public function getCommandsAlowed()
+    public function getCommandsAllowed()
     {
         return $this->COMMANDSALLOWED;
     }

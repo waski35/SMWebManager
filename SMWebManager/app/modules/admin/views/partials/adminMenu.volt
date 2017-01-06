@@ -70,6 +70,40 @@
                         <li>
                             <a href="{{url(['for': 'admin-server-management'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Management</a>
                         </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-server-settings'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Settings</a>
+                        </li>
+                        <!-- logs -->
+                        <li>
+                            <a href="{{url(['for': 'admin-adminlogs'])}}"><i class="fa fa-dashboard fa-fw"></i>Admins Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-bounties'])}}"><i class="fa fa-dashboard fa-fw"></i>Bounty Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-connections'])}}"><i class="fa fa-dashboard fa-fw"></i>Connections Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-destroylog'])}}"><i class="fa fa-dashboard fa-fw"></i>Destroy Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-kills'])}}"><i class="fa fa-dashboard fa-fw"></i>Kills Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-logs'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-sectors'])}}"><i class="fa fa-dashboard fa-fw"></i>Sector Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-serverstatus'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Status Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-votes'])}}"><i class="fa fa-dashboard fa-fw"></i>Vote Logs</a>
+                        </li>
+                        <li>
+                            <a href="{{url(['for': 'admin-smranks'])}}"><i class="fa fa-dashboard fa-fw"></i>Ranks Logs</a>
+                        </li>
                         
                         <li>
                             

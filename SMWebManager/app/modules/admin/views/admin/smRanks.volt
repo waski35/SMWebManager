@@ -26,7 +26,7 @@
                    {% for log in logs %}
                    <tr>
                        <td>{{log.getLine()}}</td>
-                       <td>{{log.getCommadsAllowed()}}</td>
+                       <td>{{log.getCommandsAllowed()}}</td>
                        <td>{{log.getName()}}</td>
 
                    </tr>
