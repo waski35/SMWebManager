@@ -1,6 +1,6 @@
 {
     "name": "SMWebManager",
-    "description": "",
+    "description": "Web management interface for starmade servers using doomsiders shadow, allows performing different commands on local server",
     "version": "1.0.0",
     "author" : [
         {
