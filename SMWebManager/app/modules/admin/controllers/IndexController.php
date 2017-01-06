@@ -32,7 +32,8 @@ class IndexController extends ControllerBase
                         // user has perms to acces everything
                         $user = array(
                                     'name' => $login, 
-                                    'pass' => md5($password)
+                                    'pass' => md5($password),
+                                    'role' => 'USER_ROLE_SUPERADMIN'
                                 );
                         
                         
@@ -85,10 +86,11 @@ class IndexController extends ControllerBase
     {
         $this->session->set(
             "auth",
-            [
+            array(
                 "name"   => $user['name'],
-                "pass" => $user['pass']
-            ]
+                "pass" => $user['pass'],
+                "role" => $user['role']
+            )
         );
     }
 

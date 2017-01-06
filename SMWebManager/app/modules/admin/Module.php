@@ -21,6 +21,7 @@ class Module implements ModuleDefinitionInterface
         $loader->registerNamespaces(array(
             'SMWebManager\Modules\Admin\Controllers' => __DIR__ . '/controllers/',
             'SMWebManager\Modules\Admin\Models' => __DIR__ . '/models/',
+            'SMWebManager\Modules\Admin\Plugins'      => __DIR__ . '/plugins/',
         ));
 
         $loader->register();

@@ -7,6 +7,8 @@ use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Flash\Direct as Flash;
+use Phalcon\Flash\Session as FlashSession;
+use Phalcon\Events\Manager as EventsManager;
 
 /**
  * Registering a router
@@ -68,8 +70,27 @@ $di->set(
 /**
 * Set the default namespace for dispatcher
 */
-$di->setShared('dispatcher', function() {
-    $dispatcher = new Dispatcher();
-    $dispatcher->setDefaultNamespace('SMWebManager\Modules\Admin\Controllers');
-    return $dispatcher;
+$di->setShared( "dispatcher",
+    function () {
+        // Create an events manager
+        $eventsManager = new EventsManager();
+
+        // Listen for events produced in the dispatcher using the Security plugin
+        $eventsManager->attach(
+            "dispatch:beforeExecuteRoute",
+            new SecurityPlugin()
+        );
+
+        // Handle exceptions and not-found exceptions using NotFoundPlugin
+        $eventsManager->attach(
+            "dispatch:beforeException",
+            new NotFoundPlugin()
+        );
+
+        $dispatcher = new Dispatcher();
+
+        // Assign the events manager to the dispatcher
+        $dispatcher->setEventsManager($eventsManager);
+
+        return $dispatcher;
 });

@@ -23,6 +23,7 @@ return new \Phalcon\Config(array(
         'modelsDir'      => APP_PATH . '/common/models/',
         'migrationsDir'  => APP_PATH . '/migrations/',
         'cacheDir'       => BASE_PATH . '/cache/',
+        
 
         // This allows the baseUri to be understand project paths that are not in the root directory
         // of the webpspace.  This will break if the public/index.php entry point is moved or
@@ -43,8 +44,13 @@ return new \Phalcon\Config(array(
     
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
-            'admin' => array('index'),
-            'index' => array('index', 'login','logout', 'notfound')
+            'admin' => array('index', 'adminlogs', 'bounties', 'connections', 'destroylog', 'kills', 'logs', 'sectors', 'servermanage', 'serverstatus', 'smRanks', 'votes', 'adminMenu'),
+            'index' => array('index', 'login','logout', 'notfound'),
+            'asteroid' => array('list', 'adminMenu'),
+            'player' => array('list', 'adminMenu'),
+            'ship' => array('list', 'adminMenu'),
+            'shop' => array('list', 'adminMenu'),
+            'station' => array('list', 'adminMenu')
             
         ),
         'USER_ROLE_GUEST' => array(
