@@ -14,20 +14,7 @@
 
             <ul class="nav navbar-top-links navbar-right">
                 
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        {% for alert in alerts %}
-                            
-                            
-                            
-                        {% endfor %}    
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
+                
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -63,7 +50,24 @@
                         </li>
                         <li>
                             {{link_to(['for': 'admin-index'], 'Home', 'class' : 'active fa fa-dashboard fa-fw') }}
+                            
                         </li>
+                        <li>
+                            {{link_to(['for': 'admin-stations'], 'Stations', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
+                        <li>
+                            {{link_to(['for': 'admin-shops'], 'Shops', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
+                        <li>
+                            {{link_to(['for': 'admin-ships'], 'Ships', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
+                        <li>
+                            {{link_to(['for': 'admin-players'], 'Players', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
+                        <li>
+                            {{link_to(['for': 'admin-asteroids'], 'Asteroids', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
+                        
                         <li>
                             
                             <!-- /.nav-second-level -->

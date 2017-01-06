@@ -4,3 +4,6 @@ SMWebManager/public/js/vendor/*
 SMWebManager/node_modules/*
 SMWebManager/cache/*
 SMWebManager/composer.phar
+SMWebManager/app/config/config.php
+SMWebManager/bower_components/*
+SMWebManager/vendor/*

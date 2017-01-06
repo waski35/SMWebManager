@@ -19,13 +19,13 @@ $di->setShared('db', function () {
     $config = $this->getConfig();
 
     $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
-    $params = [
+    $params = array(
         'host'     => $config->database->host,
         'username' => $config->database->username,
         'password' => $config->database->password,
         'dbname'   => $config->database->dbname,
         'charset'  => $config->database->charset
-    ];
+    );
 
     if ($config->database->adapter == 'Postgresql') {
         unset($params['charset']);
@@ -50,7 +50,7 @@ $di->setShared('voltShared', function ($view) {
     $config = $this->getConfig();
 
     $volt = new VoltEngine($view, $this);
-    $volt->setOptions([
+    $volt->setOptions(array(
         'compiledPath' => function($templatePath) use ($config) {
 
             // Makes the view path into a portable fragment
@@ -61,7 +61,7 @@ $di->setShared('voltShared', function ($view) {
 
             return $config->application->cacheDir . 'volt/' . $templateFrag . '.php';
         }
-    ]);
+    ));
 
     return $volt;
 });

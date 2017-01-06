@@ -16,9 +16,9 @@ class Module implements ModuleDefinitionInterface
     {
         $loader = new Loader();
 
-        $loader->registerNamespaces([
+        $loader->registerNamespaces(array(
             'SMWebManager\Modules\Cli\Tasks' => __DIR__ . '/tasks/',
-        ]);
+        ));
 
         $loader->register();
     }

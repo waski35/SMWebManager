@@ -5,7 +5,26 @@
 
         <!-- Navigation -->
             {{ partial('partials/adminMenu')}}
-            
+            <table class="table">
+               <thead>
+                   
+                    <th>line</th>
+                    <th>status</th>
+                    <th>time</th>
+                    
+               </thead>
+               <tbody>
+                   {% for log in logs %}
+                   <tr>
+                       <td>{{log.getLine()}}</td>
+                       <td>{{log.getStatus()}}</td>
+                       <td>{{log.getTime()}}</td>
+
+                   </tr>
+                   {% endfor %}
+               </tbody>
+               
+           </table>
      </div>        
 
 

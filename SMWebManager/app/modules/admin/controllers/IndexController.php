@@ -20,8 +20,10 @@ class IndexController extends ControllerBase
             {
                 $login = $this->request->getPost('login');
                 $password = $this->request->getPost('password');
+                
+                $user = false;
             
-                if ($this->config->user->$login->login == $login && $this->config->user->$login->password == $password)
+                if ($this->config->user->$login->login == $login && $this->config->user->$login->password == md5($password))
                 {
                     // authenticated via config
                 

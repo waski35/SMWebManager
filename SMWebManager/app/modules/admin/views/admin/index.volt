@@ -23,7 +23,7 @@
                                     <i class="fa fa-comments fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{serverstats.uptime}}</div>
+                                    <div class="huge">{{uptime}}</div>
                                     <div>Server Uptime 24h</div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                     <i class="fa fa-tasks fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{serverstats.playersCount }}</div>
+                                    <div class="huge">{{playersCount }}</div>
                                     <div>Players last hour</div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                     <i class="fa fa-shopping-cart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{serverstats.votes }}</div>
+                                    <div class="huge">{{votes }}</div>
                                     <div>Votes Count (month)</div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{serverstats.lastadmin}}</div>
+                                    <div class="huge">{{lastadmin}}</div>
                                     <div>Last connected Server Admin</div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                                 {% for destroy_action in destroylog %} {# up to last ten #}
                                     <a href="#" class="list-group-item">
                                         <i class="fa fa-comment fa-fw"></i> destroy_action.getName() ~ destroy_action.getType()
-                                        <span class="pull-right text-muted small"><em>destroy_action.getTime()</em>
+                                        <span class="pull-right text-muted small"><em>destroy_action.getDestroyTime()</em>
                                         </span>
                                     </a>
                                 {% endfor %}
