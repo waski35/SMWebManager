@@ -8,9 +8,9 @@ class SmRank extends Model
 {
     protected $line;
     
-    protected $commandsallowed;
+    protected $COMMANDSALLOWED;
     
-    protected $name;
+    protected $NAME;
     
     
     
@@ -26,12 +26,12 @@ class SmRank extends Model
     
     public function getCommandsAlowed()
     {
-        return $this->commandsallowed;
+        return $this->COMMANDSALLOWED;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     

@@ -8,31 +8,31 @@ class Player extends Model
 {
     protected $line;
     
-    protected $bankcredits;
+    protected $BANKCREDITS;
     
-    protected $controlling;
+    protected $CONTROLLING;
     
-    protected $controltype;
+    protected $CONTROLTYPE;
     
-    protected $credits;
+    protected $CREDITS;
     
-    protected $currentip;
+    protected $CURRENTIP;
     
-    protected $currentsector;
+    protected $CURRENTSECTOR;
     
-    protected $faction;
+    protected $FACTION;
     
-    protected $lastcore;
+    protected $LASTCORE;
     
-    protected $lastposition;
+    protected $LASTPOSITION;
     
-    protected $lastupdate;
+    protected $LASTUPDATE;
     
-    protected $name;
+    protected $NAME;
     
-    protected $online;
+    protected $ONLINE;
     
-    protected $rank;
+    protected $RANK;
     
     public function initialize()
     {
@@ -46,67 +46,67 @@ class Player extends Model
     
     public function getBankCredits()
     {
-        return $this->bankcredits;
+        return $this->BANKCREDITS;
     }
     
     public function getControlling()
     {
-        return $this->controlling;
+        return $this->CONTROLLING;
     }
     
     public function getControlType()
     {
-        return $this->controltype;
+        return $this->CONTROLTYPE;
     }
     
     public function getCredits()
     {
-        return $this->credits;
+        return $this->CREDITS;
     }
     
     public function getCurrentIp()
     {
-        return $this->currentip;
+        return $this->CURRENTIP;
     }
     
     public function getCurrentSector()
     {
-        return $this->currentsector;
+        return $this->CURRENTSECTOR;
     }
     
     public function getFaction()
     {
-        return $this->faction;
+        return $this->FACTION;
     }
     
     public function getLastCore()
     {
-        return $this->lastcore;
+        return $this->LASTCORE;
     }
     
     public function getLastPosition()
     {
-        return $this->lastposition;
+        return $this->LASTPOSITION;
     }
     
     public function getLastUpdate()
     {
-        return $this->lastupdate;
+        return $this->LASTUPDATE;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getOnLine()
     {
-        return $this->online;
+        return $this->ONLINE;
     }
     
     public function getRank()
     {
-        return $this->rank;
+        return $this->RANK;
     }
 }
 

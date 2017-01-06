@@ -8,11 +8,11 @@ class Asteroid extends Model
 {
     protected $line;
     
-    protected $currentsector;
+    protected $CURRENTSECTOR;
     
-    protected $lastposition;
+    protected $LASTPOSITION;
     
-    protected $name;
+    protected $NAME;
 
     
     public function initialize()
@@ -27,17 +27,17 @@ class Asteroid extends Model
     
     public function getCurrentSector()
     {
-        return $this->currentsector;
+        return $this->CURRENTSECTOR;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getLastPosition()
     {
-        return $this->lastposition;
+        return $this->LASTPOSITION;
     }
     
    

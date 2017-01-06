@@ -8,17 +8,17 @@ class Bounty extends Model
 {
     protected $line;
     
-    protected $bounty;
+    protected $BOUNTY;
     
-    protected $deaths;
+    protected $DEATHS;
     
-    protected $killedby;
+    protected $KILLEDBY;
     
-    protected $kills;
+    protected $KILLS;
     
-    protected $lastkill;
+    protected $LASTKILL;
     
-    protected $name;
+    protected $NAME;
     
     public function initialize()
     {
@@ -32,32 +32,32 @@ class Bounty extends Model
     
     public function getBounty()
     {
-        return $this->bounty;
+        return $this->BOUNTY;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getDeaths()
     {
-        return $this->deaths;
+        return $this->DEATHS;
     }
     
     public function getKilledBy()
     {
-        return $this->killedby;
+        return $this->KILLEDBY;
     }
     
     public function getKills()
     {
-        return $this->kills;
+        return $this->KILLS;
     }
     
     public function getLastKill()
     {
-        return $this->lastkill;
+        return $this->LASTKILL;
     }
 }
 

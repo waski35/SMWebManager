@@ -8,15 +8,15 @@ class Sector extends Model
 {
     protected $line;
     
-    protected $lastupdate;
+    protected $LASTUPDATE;
     
-    protected $name;
+    protected $NAME;
     
-    protected $peace;
+    protected $PEACE;
     
-    protected $protected;
+    protected $PROTECTED;
     
-    protected $type;
+    protected $TYPE;
     
     public function initialize()
     {
@@ -30,26 +30,26 @@ class Sector extends Model
     
     public function getLastUpdate()
     {
-        return $this->lastupdate;
+        return $this->LASTUPDATE;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
     public function getPeace()
     {
-        return $this->peace;
+        return $this->PEACE;
     }
     
     public function getProtected()
     {
-        return $this->protected;
+        return $this->PROTECTED;
     }
     
     public function getType()
     {
-        return $this->type;
+        return $this->TYPE;
     }
 }

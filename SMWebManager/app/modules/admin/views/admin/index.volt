@@ -71,9 +71,9 @@
                                     <i class="fa  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    {% for last_adm in lastadmin %}
-                                        <div class="huge">{{last_adm.getName()}}</div>
-                                    {% endfor %}
+                                    
+                                        <div class="huge">{{lastadmin}}</div>
+                                    
                                     <div>Last connected Server Admin</div>
                                 </div>
                             </div>

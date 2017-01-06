@@ -20,15 +20,10 @@ class AdminController extends ControllerBase
     {
         
             $destroyLogs = DestroyLog::find(array(
-                "order" => "DESTROYTIME DESC",
-                "limit" => 10,
+                     "limit" => 10
             ));
             
-            $lastAdmin = Player::find(array(
-                "order" => "LASTUPDATE DESC",
-                "conditions" => "RANK LIKE 'Admiral'",
-                
-            ));
+            $lastAdmin = Player::find("RANK = 'Admiral'");
             
             $dateMonthAgo = date('Y-m-d', strtotime('-30 days'));
             $dateToday = date('Y-m-d');
@@ -43,8 +38,9 @@ class AdminController extends ControllerBase
             ));
             
             
+            
             $this->view->destroylog = $destroyLogs;
-            $this->view->lastadmin = $lastAdmin;
+            $this->view->lastadmin = $lastAdmin->getFirst()->getName();
             $this->view->votes = $votesLastMonth->count();
             $this->view->playersCount = $playersLastMonth->count();
             $this->view->uptime = '100% - test value';

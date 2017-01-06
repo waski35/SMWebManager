@@ -8,11 +8,11 @@ class DestroyLog extends Model
 {
     protected $line;
     
-    protected $name;
+    protected $NAME;
     
-    protected $type;
+    protected $TYPE;
     
-    protected $destroytime;
+    protected $DESTROYTIME;
     
     public function initialize()
     {
@@ -26,17 +26,17 @@ class DestroyLog extends Model
     
     public function getType()
     {
-        return $this->type;
+        return $this->TYPE;
     }
     
     public function getName()
     {
-        return $this->name;
+        return $this->NAME;
     }
     
         
     public function getDestroyTime()
     {
-        return $this->destroytime;
+        return $this->DESTROYTIME;
     }
 }
