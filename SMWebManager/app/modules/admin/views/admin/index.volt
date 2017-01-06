@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">{{playersCount }}</div>
-                                    <div>Players last hour</div>
+                                    <div>Players last month</div>
                                 </div>
                             </div>
                         </div>

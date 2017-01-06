@@ -12,6 +12,7 @@ use SMWebManager\Modules\Admin\Models\ServerStatus;
 use SMWebManager\Modules\Admin\Models\Bounty;
 use SMWebManager\Modules\Admin\Models\Kills;
 use SMWebManager\Modules\Admin\Models\Vote;
+use SMWebManager\Modules\Admin\Models\Player;
 
 class AdminController extends ControllerBase
 {
@@ -24,12 +25,84 @@ class AdminController extends ControllerBase
                 "limit" => 10,
             ));
             
+            $lastAdmin = Player::find(array(
+                "order" => "online",
+                "conditions" => "rank = Admiral",
+                "limit" => 1,
+            ));
+            
+            $votesLastMonth = Vote::find(array(
+                "conditions" => "time BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()"
+                
+            ));
+            
+            $playersLastMonth = Player::find(array(
+                "conditions" => "online BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW()"
+                
+            ));
+            
+            
             $this->view->destroylog = $destroyLogs;
+            $this->view->lastadmin = $lastAdmin;
+            $this->view->votes = $votesLastMonth->count();
+            $this->view->playersCount = $playersLastMonth->count();
+            $this->view->uptime = '100% - test value';
+            
             
             
         }
         
-    }    
+    }
+
+    public function ServerManageAction($action)
+    {
+        if ($this->checkAuth()) // check if auth session is OK and user is properly authenicated
+        {
+            if ($action == 'kill')
+            {
+                
+            }
+            else if ($action == 'restart')
+            {
+                
+            }
+            else if ($action == 'start')
+            {
+                
+            }
+            else if ($action == 'backupuni')
+            {
+                
+            }
+            else if ($action == 'updatesrv')
+            {
+                
+            }
+            else if ($action == 'updateshdw')
+            {
+                
+            }
+            
+            $lastServerStatus = ServerStatus::find(array(
+                "order" => "time",
+                "limit" => 1
+            ));
+            
+            $this->view->serverstatus = $lastServerStatus;
+            
+            
+            
+        }
+    }
+    
+    public function ServerSettingsAction()
+    {
+        if ($this->checkAuth()) // check if auth session is OK and user is properly authenicated
+        {
+            
+            
+        }
+    }
     
     public function connectionsAction()
     {
@@ -167,7 +240,7 @@ class AdminController extends ControllerBase
         $this->view->disable();
         $this->session->destroy();
         $this->response->redirect(array("for" => "index"));
-        $this->flash->error('Invalid session');
+        $this->flashsession->error('Invalid session');
         return false;
         
     }

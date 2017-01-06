@@ -55,6 +55,8 @@ return new \Phalcon\Config(array(
         
     ),
     
+    'path_to_doomsiders_shadow' => 'enter_here_path_to_doomsiders_shadow_directory',
+    
     /**
      * if true, then we print a new line at the end of each CLI execution
      *

@@ -67,6 +67,9 @@
                         <li>
                             {{link_to(['for': 'admin-asteroids'], 'Asteroids', 'class' : ' fa fa-dashboard fa-fw') }}
                         </li>
+                        <li>
+                            {{link_to(['for': 'admin-server-management'], 'Server Management', 'class' : ' fa fa-dashboard fa-fw') }}
+                        </li>
                         
                         <li>
                             

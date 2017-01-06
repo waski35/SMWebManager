@@ -88,48 +88,90 @@ $router->add('/admin/smranks', array(
    'action' => 'smranks'
 ))->setName('admin-smranks');
 
+$router->add('/admin/servermanage/{action}', array (
+    'module' => 'admin',
+    'controller' => 'admin',
+    'action' => 'servermanage'
+))->setName('admin-server-management');
+
+$router->add('/admin/serversettings', array (
+    'module' => 'admin',
+    'controller' => 'admin',
+    'action' => 'serversettings'
+))->setName('admin-server-settings');
+
 // asteroids
 
-$router->add('/admin/asteroids', array(
+$router->add('/admin/asteroid/list', array(
    'module' => 'admin',
    'controller' => 'asteroid',
    'action' => 'list'
 ))->setName('admin-asteroids');
 
+$router->add('/admin/asteroid/details/{line}', array(
+   'module' => 'admin',
+   'controller' => 'asteroid',
+   'action' => 'details'
+))->setName('admin-asteroid-details');
+
 
 
 // players
 
-$router->add('/admin/players', array(
+$router->add('/admin/player/list', array(
    'module' => 'admin',
    'controller' => 'player',
    'action' => 'list'
 ))->setName('admin-players');
 
+$router->add('/admin/player/details/{line}', array(
+   'module' => 'admin',
+   'controller' => 'player',
+   'action' => 'details'
+))->setName('admin-player-details');
+
 
 
 // ships
 
-$router->add('/admin/ships', array(
+$router->add('/admin/ship/list', array(
    'module' => 'admin',
    'controller' => 'ship',
    'action' => 'list'
 ))->setName('admin-ships');
 
+$router->add('/admin/ship/details/{link}', array(
+   'module' => 'admin',
+   'controller' => 'ship',
+   'action' => 'details'
+))->setName('admin-ship-details');
+
 // shops
-$router->add('/admin/shops', array(
+$router->add('/admin/shop/list', array(
    'module' => 'admin',
    'controller' => 'shop',
    'action' => 'list'
 ))->setName('admin-shops');
 
+$router->add('/admin/shop/details/{link}', array(
+   'module' => 'admin',
+   'controller' => 'shop',
+   'action' => 'details'
+))->setName('admin-shop-details');
+
 
 
 // stations
 
-$router->add('/admin/stations', array(
+$router->add('/admin/station/list', array(
    'module' => 'admin',
    'controller' => 'station',
    'action' => 'list'
 ))->setName('admin-stations');
+
+$router->add('/admin/station/details/{link}', array(
+   'module' => 'admin',
+   'controller' => 'station',
+   'action' => 'details'
+))->setName('admin-station-details');
 

@@ -13,6 +13,6 @@
     "tests"
   ],
   "dependencies": {
-    "startbootstrap-sb-admin-2": "startbootstrap-sb-admin#^3.3.7+1"
+    "startbootstrap-sb-admin-2": "startbootstrap-sb-admin#3.3.7+1"
   }
 }

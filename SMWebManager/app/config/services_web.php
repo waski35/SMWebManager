@@ -53,6 +53,18 @@ $di->set('flash', function () {
     ));
 });
 
+$di->set(
+    "flashsession",
+    function () {
+        return new FlashSession(array(
+        'error'   => 'alert alert-danger',
+        'success' => 'alert alert-success',
+        'notice'  => 'alert alert-info',
+        'warning' => 'alert alert-warning'
+    ));
+    }
+);
+
 /**
 * Set the default namespace for dispatcher
 */

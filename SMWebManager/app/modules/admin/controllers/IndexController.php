@@ -40,13 +40,13 @@ class IndexController extends ControllerBase
                     }
                     else 
                     {
-                        $this->flash->warning("You don't have permissions to access admin panel.");
+                        $this->flashsession->warning("You don't have permissions to access admin panel.");
                     }
                 
                 }
                 else 
                 {
-                    $this->flash->warning("Login / Password incorrect !");
+                    $this->flashsession->warning("Login / Password incorrect !");
                 }
                 if ($user !== false) 
                 {
@@ -60,7 +60,7 @@ class IndexController extends ControllerBase
             }
             else
             {
-                $this->flash->error("invalid csrf token");
+                $this->flashsession->error("invalid csrf token");
             }
             
             
@@ -73,7 +73,7 @@ class IndexController extends ControllerBase
     {
         $this->session->destroy();
         $this->response->redirect(array("for" => "index"));
-        $this->flash->success("Logged off successfully");
+        $this->flashsession->success("Logged off successfully");
         
     }
     

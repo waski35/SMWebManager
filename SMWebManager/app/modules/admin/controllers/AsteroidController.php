@@ -2,13 +2,17 @@
 
 namespace SMWebManager\Modules\Admin\Controllers;
 
+use SMWebManager\Modules\Admin\Models\Asteroid;
+
 class AsteroidController extends ControllerBase
 {
     public function listAction()
     {
         if ($this->checkAuth()) // chack if auth session is OK and user is properly authenicated
         {
+            $logs = Asteroid::find();
             
+            $this->view->logs = $logs;
         }
         
     }    
@@ -29,7 +33,7 @@ class AsteroidController extends ControllerBase
         $this->view->disable();
         $this->session->destroy();
         $this->response->redirect(array("for" => "index"));
-        $this->flash->error('Invalid session');
+        $this->flashsession->error('Invalid session');
         return false;
         
     }
