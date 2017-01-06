@@ -7,3 +7,4 @@ SMWebManager/composer.phar
 SMWebManager/app/config/config.php
 SMWebManager/bower_components/*
 SMWebManager/vendor/*
+SMWebManager/app/config/config.php
