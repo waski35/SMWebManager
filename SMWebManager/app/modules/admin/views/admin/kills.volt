@@ -14,7 +14,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="killsLog">
                <thead>
                    
                     <th>line</th>
@@ -23,14 +23,7 @@
                     <th>victim</th>
                 </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getKiller()}}</td>
-                       <td>{{log.getKillTime()}}</td>
-                       <td>{{log.getVictim()}}</td>
-                   </tr>
-                   {% endfor %}
+                   
                </tbody>
                
            </table>   

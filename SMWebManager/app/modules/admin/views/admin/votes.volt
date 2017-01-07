@@ -14,7 +14,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="votesLog">
                <thead>
                     
                     <th>line</th>
@@ -24,14 +24,7 @@
                     
                </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getInfo()}}</td>
-                       <td>{{log.getName()}}</td>
-                       <td>{{log.getTime()}}</td>
-                   </tr>
-                   {% endfor %}
+                   
                </tbody>
                
            </table>

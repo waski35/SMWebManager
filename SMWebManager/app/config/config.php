@@ -44,13 +44,13 @@ return new \Phalcon\Config(array(
     
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
-            'admin' => array('index', 'adminlogs', 'bounties', 'connections', 'destroylog', 'kills', 'logs', 'sectors', 'servermanage', 'serverstatus', 'smranks', 'votes', 'adminMenu'),
+            'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage', 'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
             'index' => array('index', 'login','logout', 'notfound'),
-            'asteroid' => array('list', 'adminMenu'),
-            'player' => array('list', 'adminMenu'),
-            'ship' => array('list', 'adminMenu'),
-            'shop' => array('list', 'adminMenu'),
-            'station' => array('list', 'adminMenu')
+            'asteroid' => array('list','listAjax', 'adminMenu'),
+            'player' => array('list','listAjax', 'adminMenu'),
+            'ship' => array('list','listAjax',  'adminMenu'),
+            'shop' => array('list','listAjax', 'adminMenu'),
+            'station' => array('list','listAjax', 'adminMenu')
             
         ),
         'USER_ROLE_GUEST' => array(

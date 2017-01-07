@@ -14,7 +14,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="connLog">
                <thead>
                 
                     <th>line</th>
@@ -22,17 +22,10 @@
                     <th>name</th>
                     <th>status</th>
                     <th>time</th>
+                    <th>action</th>
                 </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getIP()}}</td>
-                       <td>{{log.getStatus()}}</td>
-                       <td>{{log.getTime()}}</td>
-                       <td>{{log.getName()}}</td>
-                   </tr>
-                   {% endfor %}
+                   
                </tbody>
                
            </table>    

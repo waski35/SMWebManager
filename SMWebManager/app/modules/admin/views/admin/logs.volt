@@ -14,22 +14,16 @@
             </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="logsLog">
                <thead>
                     
                     <th>line</th>
-                    <th>log date</th>
-                    <th>log string</th>
+                    <th>logdate</th>
+                    <th>logstring</th>
 
                 </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getLogDate()}}</td>
-                       <td>{{log.getLogString()}}</td>
-                   </tr>
-                   {% endfor %}
+                  
                </tbody>
                
            </table>  
