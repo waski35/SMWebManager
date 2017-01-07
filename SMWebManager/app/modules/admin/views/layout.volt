@@ -207,6 +207,146 @@
 
                     ]
                 });});
+            
+            
+            
+            $(document).ready(function() {
+                $('#asteroidList').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/asteroid/listAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'CURRENTSECTOR'},
+                        {data: 'LASTPOSITION'},
+                        {data: 'NAME', searchable: false},
+                        {
+                            targets: 5,
+                            data: 'line',
+                            render: function ( data, type, full, meta ) {
+                                    return "<a href='/admin/asteroid/details/"+data+"'>Details</a>";
+                                        }
+                        }
+                    ]
+                });});
+            
+            $(document).ready(function() {
+                $('#playerList').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/player/listAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'BANKCREDITS'},
+                        {data: 'CONTROLLING'},
+                        {data: 'CONTROLTYPE'},
+                        {data: 'CREDITS'},
+                        {data: 'CURRENTIP'},
+                        {data: 'CURRENTSECTOR'},
+                        {data: 'FACTION'},
+                        {data: 'LASTCORE'},
+                        {data: 'LASTPOSITION'},
+                        {data: 'LASTUPDATE'},
+                        {data: 'NAME'},
+                        {data: 'ONLINE'},
+                        {data: 'RANK'},
+                        {
+                            targets: 5,
+                            data: 'line',
+                            render: function ( data, type, full, meta ) {
+                                    return "<a href='/admin/player/details/"+data+"'>Details</a>";
+                                        }
+                        }
+                    ]
+                });});
+            
+            $(document).ready(function() {
+                $('#shipList').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/ship/listAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'ATTACHED'},
+                        {data: 'BLOCK'},
+                        {data: 'CREATOR'},
+                        {data: 'CURRENTSECTOR'},
+                        {data: 'DOCKED'},
+                        {data: 'ENTITYTYPE'},
+                        {data: 'FACTION'},
+                        {data: 'LASTCONTROLLER'},
+                        {data: 'LASTPOSITION'},
+                        {data: 'LASTUPDATE'},
+                        {data: 'MASS'},
+                        {data: 'NAME'},
+                        {
+                            targets: 5,
+                            data: 'line',
+                            render: function ( data, type, full, meta ) {
+                                    return "<a href='/admin/ship/details/"+data+"'>Details</a>";
+                                        }
+                        }
+                    ]
+                });});
+            
+            
+            $(document).ready(function() {
+                $('#shopList').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/shop/listAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'CURRENTSECTOR'},
+                        {data: 'NAME'},
+                        {
+                            targets: 5,
+                            data: 'line',
+                            render: function ( data, type, full, meta ) {
+                                    return "<a href='/admin/shop/details/"+data+"'>Details</a>";
+                                        }
+                        }
+                    ]
+                });});
+            
+            
+            $(document).ready(function() {
+                $('#stationList').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/station/listAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'ATTACHED'},
+                        {data: 'BLOCK'},
+                        {data: 'CREATOR'},
+                        {data: 'CURRENTSECTOR'},
+                        {data: 'DOCKED'},
+                        {data: 'ENTITYTYPE'},
+                        {data: 'FACTION'},
+                        {data: 'LASTCONTROLLER'},
+                        {data: 'LASTPOSITION'},
+                        {data: 'MASS'},
+                        {data: 'NAME'},
+                        {
+                            targets: 13,
+                            data: 'line',
+                            render: function ( data, type, full, meta ) {
+                                    return "<a href='/admin/station/details/"+data+"'>Details</a>";
+                                        }
+                        }
+                    ]
+                });});
         </script>    
     </body>
 </html>

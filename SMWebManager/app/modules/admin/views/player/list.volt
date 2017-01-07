@@ -14,45 +14,27 @@
                 </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="playerList">
                <thead>
                    
                     <th>line</th>
-                    <th>bank credits</th>
+                    <th>bankcredits</th>
                     <th>controlling</th>
-                    <th>control type</th>
+                    <th>controltype</th>
                     <th>credits</th>
-                    <th>current ip</th>
-                    <th>current sector</th>
-                    <th>faction id</th>
-                    <th>last core</th>
-                    <th>last position</th>
-                    <th>last update</th>
+                    <th>currentip</th>
+                    <th>currentsector</th>
+                    <th>faction</th>
+                    <th>lastcore</th>
+                    <th>lastposition</th>
+                    <th>lastupdate</th>
                     <th>name</th>
                     <th>online</th>
                     <th>rank</th>
                     <th>action</th>
                </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getBankCredits()}}</td>
-                       <td>{{log.getControlling()}}</td>
-                       <td>{{log.getControlType()}}</td>
-                       <td>{{log.getCredits()}}</td>
-                       <td>{{log.getCurrentIp()}}</td>
-                       <td>{{log.getCurrentSector()}}</td>
-                       <td>{{log.getFaction()}}</td>
-                       <td>{{log.getLastCore()}}</td>
-                       <td>{{log.getLastPosition()}}</td>
-                       <td>{{log.getLastUpdate()}}</td>
-                       <td>{{log.getName()}}</td>
-                       <td>{{log.getOnLine()}}</td>
-                       <td>{{log.getRank()}}</td>
-                       <td>{{ link_to(["for": "admin-player-details", "line": log.getLine()], "Details") }}</td>
-                   </tr>
-                   {% endfor %}
+                   
                </tbody>
                
            </table>

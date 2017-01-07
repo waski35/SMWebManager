@@ -108,6 +108,12 @@ $router->add('/admin/asteroid/list', array(
    'action' => 'list'
 ))->setName('admin-asteroids');
 
+$router->add('/admin/asteroid/listAjax', array(
+    'module' => 'admin',
+    'controller' => 'asteroid',
+    'action' => 'listAjax'
+))->setName('admin-asteroid-listAjax');
+
 $router->add('/admin/asteroid/details/{line}', array(
    'module' => 'admin',
    'controller' => 'asteroid',
@@ -123,6 +129,12 @@ $router->add('/admin/player/list', array(
    'controller' => 'player',
    'action' => 'list'
 ))->setName('admin-players');
+
+$router->add('/admin/player/listAjax', array(
+    'module' => 'admin',
+    'controller' => 'player',
+    'action' => 'listAjax'
+))->setName('admin-player-listAjax');
 
 $router->add('/admin/player/details/{line}', array(
    'module' => 'admin',
@@ -140,6 +152,12 @@ $router->add('/admin/ship/list', array(
    'action' => 'list'
 ))->setName('admin-ships');
 
+$router->add('/admin/ship/listAjax', array(
+    'module' => 'admin',
+    'controller' => 'ship',
+    'action' => 'listAjax'
+))->setName('admin-ship-listAjax');
+
 $router->add('/admin/ship/details/{link}', array(
    'module' => 'admin',
    'controller' => 'ship',
@@ -152,6 +170,12 @@ $router->add('/admin/shop/list', array(
    'controller' => 'shop',
    'action' => 'list'
 ))->setName('admin-shops');
+
+$router->add('/admin/shop/listAjax', array(
+    'module' => 'admin',
+    'controller' => 'shop',
+    'action' => 'listAjax'
+))->setName('admin-shop-listAjax');
 
 $router->add('/admin/shop/details/{link}', array(
    'module' => 'admin',
@@ -168,6 +192,12 @@ $router->add('/admin/station/list', array(
    'controller' => 'station',
    'action' => 'list'
 ))->setName('admin-stations');
+
+$router->add('/admin/station/listAjax', array(
+    'module' => 'admin',
+    'controller' => 'station',
+    'action' => 'listAjax'
+))->setName('admin-station-listAjax');
 
 $router->add('/admin/station/details/{link}', array(
    'module' => 'admin',
