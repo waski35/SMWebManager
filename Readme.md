@@ -9,11 +9,11 @@ This software is licensed under GNU GPL 2 license. For terms see : https://www.g
 
 # Dependencies
 
-- doomsider's shadow (with all its dependencies, working)
+- doomsider's shadow (with all its dependencies, working) - https://github.com/doomsider/shadow (follow its install instructions)
 
 - Apache 2.4
 - PHP 5.6
-- Phalcon 3.0.* PHP Framework
+- Phalcon 3.0.* PHP Framework (install instruction : https://docs.phalconphp.com/en/latest/reference/install.html)
 - npm, nodejs (to install project javascript dependencies)
 
 # Installation
@@ -38,11 +38,12 @@ Also You should change default admin password for ore secure (default is 'secret
 - ability to show details about players, ships, stations, shops, asteroids on given list,
 - ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
 - add option for local/remote server install admin authorisation for performing above tasks,
+- allow controlling doomsiders shadow via web GUI,
 
 
 # Future plans
 
-- allow controlling doomsiders shadow via web GUI,
+
 - allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 - admin ranks for administrative users, with configurable restricted priviledges for each rank (permission system),
 - show more sophisticated stats live from starmade server (via doomsiders script), or at least update stats with configurable time interval,

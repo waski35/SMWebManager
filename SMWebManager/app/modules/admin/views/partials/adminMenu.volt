@@ -68,7 +68,7 @@
                             <a href="{{url(['for': 'admin-asteroids'])}}"><i class="fa fa-dashboard fa-fw"></i>Asteroids</a>
                         </li>
                         <li>
-                            <a href="{{url(['for': 'admin-server-management'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Management</a>
+                            <a href="{{url('/admin/servermanage/show')}}"><i class="fa fa-dashboard fa-fw"></i>Server Management</a>
                         </li>
                         <li>
                             <a href="{{url(['for': 'admin-server-settings'])}}"><i class="fa fa-dashboard fa-fw"></i>Server Settings</a>

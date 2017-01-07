@@ -51,40 +51,70 @@ class AdminController extends ControllerBase
        
     }
 
-    public function ServerManageAction($action)
+    public function ServerManageAction($do_action)
     {
        
-            if ($action == 'kill')
-            {
-                
-            }
-            else if ($action == 'restart')
-            {
-                
-            }
-            else if ($action == 'start')
-            {
-                
-            }
-            else if ($action == 'backupuni')
-            {
-                
-            }
-            else if ($action == 'updatesrv')
-            {
-                
-            }
-            else if ($action == 'updateshdw')
-            {
-                
-            }
-            
-            $lastServerStatus = ServerStatus::find(array(
-                "order" => "time",
+        $lastServerStatus = ServerStatus::find(array(
+                "order" => "TIME DESC",
                 "limit" => 1
             ));
+            if ($do_action == 'kill')
+            {
+                if ($lastServerStatus->getStatus() != 'Stopped' || $lastServerStatus->getStatus() != 'Kill')
+                {
+                    // perform kill
+                    
+                }
+            }
+            else if ($do_action == 'restart')
+            {
+                if ($lastServerStatus->getStatus() != 'Stopped' || $lastServerStatus->getStatus() != 'Kill')
+                {
+                    // perform restart
+                    
+                }
+            }
+            else if ($do_action == 'start')
+            {
+                if ($lastServerStatus->getStatus() != 'Starting')
+                {
+                    // perform start
+                    
+                }
+                
+            }
+            else if ($do_action == 'backupuni')
+            {
+                if ($lastServerStatus->getStatus() != 'Starting')
+                {
+                    // perform backup of universe
+                    
+                }
+            }
+            else if ($do_action == 'updatesrv')
+            {
+                if ($lastServerStatus->getStatus() != 'Starting')
+                {
+                    // perform update server binaries
+                    
+                }
+            }
+            else if ($do_action == 'updateshdw')
+            {
+                if ($lastServerStatus->getStatus() != 'Starting')
+                {
+                    // perform update shadow
+                    
+                }
+            }
             
-            $this->view->serverstatus = $lastServerStatus;
+            
+            
+            
+            
+            
+            
+            $this->view->serverstatus = $lastServerStatus->getFirst();
             
             
             

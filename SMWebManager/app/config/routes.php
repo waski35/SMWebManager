@@ -2,6 +2,14 @@
 
 $router = $di->getRouter();
 
+$router->notFound(array(
+    
+    "module" => "admin",
+    "controller" => "index",
+    "action"     => "index",
+    )
+);
+
 $router->add('/', array(
    'module' => 'admin',
    'controller' => 'index',
@@ -88,11 +96,13 @@ $router->add('/admin/smranks', array(
    'action' => 'smranks'
 ))->setName('admin-smranks');
 
-$router->add('/admin/servermanage/{action}', array (
+$router->add('/admin/servermanage/{do_action}', array (
     'module' => 'admin',
     'controller' => 'admin',
     'action' => 'servermanage'
 ))->setName('admin-server-management');
+
+
 
 $router->add('/admin/serversettings', array (
     'module' => 'admin',
