@@ -10,6 +10,7 @@ $loader = new Loader();
 $loader->registerNamespaces(array(
     'SMWebManager\Models' => APP_PATH . '/common/models/',
     'SMWebManager\Library'        => APP_PATH . '/common/library/',
+    'DataTables' => __DIR__ . '/../../vendor/m1ome/phalcon-datatables/src/',
     
 ));
 

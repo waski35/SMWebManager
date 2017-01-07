@@ -14,7 +14,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-            <table class="table">
+            <table class="table" id="serverstatusLog">
                <thead>
                    
                     <th>line</th>
@@ -23,14 +23,7 @@
                     
                </thead>
                <tbody>
-                   {% for log in logs %}
-                   <tr>
-                       <td>{{log.getLine()}}</td>
-                       <td>{{log.getStatus()}}</td>
-                       <td>{{log.getTime()}}</td>
-
-                   </tr>
-                   {% endfor %}
+                   
                </tbody>
                
            </table>

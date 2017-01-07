@@ -22,6 +22,7 @@ class Module implements ModuleDefinitionInterface
             'SMWebManager\Modules\Admin\Controllers' => __DIR__ . '/controllers/',
             'SMWebManager\Modules\Admin\Models' => __DIR__ . '/models/',
             'SMWebManager\Modules\Admin\Plugins'      => __DIR__ . '/plugins/',
+            'DataTables' => __DIR__ . '../../vendor/m1ome/phalcon-datatables/src/',
         ));
 
         $loader->register();

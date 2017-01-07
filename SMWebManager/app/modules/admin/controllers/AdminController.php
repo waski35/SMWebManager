@@ -14,6 +14,7 @@ use SMWebManager\Modules\Admin\Models\Kills;
 use SMWebManager\Modules\Admin\Models\Vote;
 use SMWebManager\Modules\Admin\Models\Player;
 
+
 class AdminController extends ControllerBase
 {
     public function indexAction()
@@ -93,107 +94,176 @@ class AdminController extends ControllerBase
     {
         
     }
-    
     public function connectionsAction()
     {
         
+    }
+    
+    public function connectionsAjaxAction()
+    {
+        
+        if ($this->request->isAjax()) {
             $logs = ConnectionLog::find();
             
-            $this->view->logs = $logs;
-        
-        
+            //$this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
     }
 
     public function destroylogAction()
     {
         
+    }
+    public function destroylogAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = DestroyLog::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }
     
     public function logsAction()
     {
         
+    }
+    
+    public function logsAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = Log::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
+                    
         
     }    
-    
-   
-    
     public function sectorsAction()
     {
         
+    }
+   
+    
+    public function sectorsAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = Sector::find();
             
-            $this->view->logs = $logs;
-        
+         //   $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }    
     
-    public function serverstatusAction()
+    public function serverstatusAction() 
     {
         
+    }
+    public function serverstatusAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = ServerStatus::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }    
     
-    
-    
-      
     
     public function smranksAction()
     {
         
+    }
+      
+    
+    public function smranksAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = SmRank::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }
 
-       
-    
     public function adminlogsAction()
     {
         
+    }
+       
+    
+    public function adminlogsAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = AdminLog::find();
             
-            $this->view->adminlogs = $logs;
+        //    $this->view->adminlogs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
             
-        
+        }
         
     }        
-    
     
     public function bountiesAction()
     {
         
+    }
+    
+    public function bountiesAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = Bounty::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }     
     
     public function killsAction()
     {
         
+    }
+    
+    public function killsAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = Kills::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
-    }        
+    }  
     
     public function votesAction()
     {
         
+    }
+    
+    public function votesAjaxAction()
+    {
+        if ($this->request->isAjax()) {
             $logs = Vote::find();
             
-            $this->view->logs = $logs;
+        //    $this->view->logs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+        }
         
     }        
     

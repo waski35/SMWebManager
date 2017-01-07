@@ -15,7 +15,7 @@ class Log extends Model
     
     public function initialize()
     {
-        $this->setSource("GUESTBOOK");
+        $this->setSource("SERVERLOG");
     }
     
     public function getLine()
