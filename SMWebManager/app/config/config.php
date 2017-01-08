@@ -30,6 +30,8 @@ return new \Phalcon\Config(array(
         // possibly if the web server rewrite rules are changed. This can also be set to a static path.
         'baseUri'     =>  '/',
     ),
+    
+    // here are defined users of application thay must have login, password, role (one of defined in next section). Please keep specified format, things may break otherwise.
     'user' => array(
         'admin' => array(
             'login' => 'admin',
@@ -42,6 +44,7 @@ return new \Phalcon\Config(array(
                
     ),
     
+    // ACL - permission system for roles defined in application - You can safely add new ones ie. 'USER_ROLE_SUPERADMIN' is role, 'admin' is controller, 'index' is (among others action (page))
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
             'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage','serversettings',  'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
@@ -60,7 +63,7 @@ return new \Phalcon\Config(array(
         
         
     ),
-    
+    // basic settings path to doomsiders shadow script is required to give commands to server
     'path_to_shadow' => '',
     'SM_SRV_instance_name' => '',
     'SM_SRV_instance_port' => '',
