@@ -14,7 +14,7 @@ This software is licensed under GNU GPL 2 license. For terms see : https://www.g
 - Apache 2.4
 - PHP 5.5
 - Phalcon 3.0.* PHP Framework (install instruction : https://docs.phalconphp.com/en/latest/reference/install.html)
-- npm, nodejs (to install project javascript dependencies)
+- npm, nodejs, php composer (to install project javascript / php  dependencies)
 
 # Installation
 
