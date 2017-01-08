@@ -122,6 +122,16 @@ class AdminController extends ControllerBase
     
     public function ServerSettingsAction()
     {
+        $shadow = $this->config->path_to_shadow;
+        $instance_name = $this->config->SM_SRV_instance_name;
+        $instance_port = $this->config->SM_SRV_instance_port;
+        $instance_host = $this->config->SM_SRV_instance_host;
+        
+        $this->view->shadow = $shadow;
+        $this->view->instance_name = $instance_name;
+        $this->view->instance_port = $instance_port;
+        $this->view->instance_host = $instance_host;
+        
         
     }
     public function connectionsAction()

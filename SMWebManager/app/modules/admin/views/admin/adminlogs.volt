@@ -1,10 +1,7 @@
 {% extends "layout.volt" %}
 
 {% block content %}
-     <div id="wrapper">
 
-        <!-- Navigation -->
-        {{ partial('partials/adminMenu')}}
         <div id="page-wrapper" style="min-height: 650px;">
                 <div class="row">
                     <div class="col-lg-12">
@@ -31,7 +28,7 @@
             
             </div>
         </div>
-     </div>        
+       
 
 
 {% endblock %}    

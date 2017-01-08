@@ -44,7 +44,7 @@ return new \Phalcon\Config(array(
     
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
-            'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage', 'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
+            'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage','serversettings',  'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
             'index' => array('index', 'login','logout', 'notfound'),
             'asteroid' => array('list','listAjax', 'adminMenu', 'details'),
             'player' => array('list','listAjax', 'adminMenu', 'details'),
@@ -61,7 +61,10 @@ return new \Phalcon\Config(array(
         
     ),
     
-    'path_to_doomsiders_shadow' => 'enter_here_path_to_doomsiders_shadow_directory',
+    'path_to_shadow' => '',
+    'SM_SRV_instance_name' => '',
+    'SM_SRV_instance_port' => '',
+    'SM_SRV_instance_host' => '',
     
     /**
      * if true, then we print a new line at the end of each CLI execution
