@@ -39,11 +39,11 @@ This can be achieved by using official apache-mpm-itk version, and by configurin
 
 # In Development ("-" schedeuled, "+" completed)
 
-+ ability to show details about players, ships, stations, shops, asteroids on given list,
--/+ ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
+- (+) ability to show details about players, ships, stations, shops, asteroids on given list,
+- (-/+)ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
 - add option for local/remote server install admin authorisation for performing above tasks,
--/+ allow controlling doomsiders shadow via web GUI,
--/+ allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
+- (-/+) allow controlling doomsiders shadow via web GUI,
+- (-/+) allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 
 
 # Future plans
