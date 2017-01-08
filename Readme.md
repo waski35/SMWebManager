@@ -9,11 +9,11 @@ This software is licensed under GNU GPL 2 license. For terms see : https://www.g
 
 # Dependencies
 
-- doomsider's shadow (with all its dependencies, working)
+- doomsider's shadow (with all its dependencies, working) - https://github.com/doomsider/shadow (follow its install instructions)
 
 - Apache 2.4
-- PHP 5.6
-- Phalcon 3.0.* PHP Framework
+- PHP 5.5
+- Phalcon 3.0.* PHP Framework (install instruction : https://docs.phalconphp.com/en/latest/reference/install.html)
 - npm, nodejs (to install project javascript dependencies)
 
 # Installation
@@ -31,19 +31,23 @@ php composer.phar install
 # SMWM Configuration
 
 In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
-Also You should change default admin password for ore secure (default is 'secret_admin_password', login 'admin')
+Also You should change default admin password for ore secure (default is 'secret_admin_password', login 'admin').
+
+Warning ! Apache Web Server should be configured to run as the same user who owns and runs doomsiders shadow and starmade server - for this SMWM to operate properly.
+This can be achieved by using official apache-mpm-itk version, and by configuring sites virtual host to be server as said user.
 
 
-# in Development
-- ability to show details about players, ships, stations, shops, asteroids on given list,
-- ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
+# In Development ("-" schedeuled, "+" completed)
+
++ ability to show details about players, ships, stations, shops, asteroids on given list,
+-/+ ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
 - add option for local/remote server install admin authorisation for performing above tasks,
+-/+ allow controlling doomsiders shadow via web GUI,
+-/+ allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 
 
 # Future plans
 
-- allow controlling doomsiders shadow via web GUI,
-- allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 - admin ranks for administrative users, with configurable restricted priviledges for each rank (permission system),
 - show more sophisticated stats live from starmade server (via doomsiders script), or at least update stats with configurable time interval,
 - SM server faliure reporting, and logging

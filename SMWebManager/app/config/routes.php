@@ -2,6 +2,14 @@
 
 $router = $di->getRouter();
 
+$router->notFound(array(
+    
+    "module" => "admin",
+    "controller" => "index",
+    "action"     => "index",
+    )
+);
+
 $router->add('/', array(
    'module' => 'admin',
    'controller' => 'index',
@@ -88,11 +96,13 @@ $router->add('/admin/smranks', array(
    'action' => 'smranks'
 ))->setName('admin-smranks');
 
-$router->add('/admin/servermanage/{action}', array (
+$router->add('/admin/servermanage/{do_action}', array (
     'module' => 'admin',
     'controller' => 'admin',
     'action' => 'servermanage'
 ))->setName('admin-server-management');
+
+
 
 $router->add('/admin/serversettings', array (
     'module' => 'admin',
@@ -158,7 +168,7 @@ $router->add('/admin/ship/listAjax', array(
     'action' => 'listAjax'
 ))->setName('admin-ship-listAjax');
 
-$router->add('/admin/ship/details/{link}', array(
+$router->add('/admin/ship/details/{line}', array(
    'module' => 'admin',
    'controller' => 'ship',
    'action' => 'details'
@@ -177,7 +187,7 @@ $router->add('/admin/shop/listAjax', array(
     'action' => 'listAjax'
 ))->setName('admin-shop-listAjax');
 
-$router->add('/admin/shop/details/{link}', array(
+$router->add('/admin/shop/details/{line}', array(
    'module' => 'admin',
    'controller' => 'shop',
    'action' => 'details'
@@ -199,7 +209,7 @@ $router->add('/admin/station/listAjax', array(
     'action' => 'listAjax'
 ))->setName('admin-station-listAjax');
 
-$router->add('/admin/station/details/{link}', array(
+$router->add('/admin/station/details/{line}', array(
    'module' => 'admin',
    'controller' => 'station',
    'action' => 'details'
