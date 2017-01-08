@@ -46,11 +46,11 @@ return new \Phalcon\Config(array(
         'USER_ROLE_SUPERADMIN' => array(
             'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage', 'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
             'index' => array('index', 'login','logout', 'notfound'),
-            'asteroid' => array('list','listAjax', 'adminMenu'),
-            'player' => array('list','listAjax', 'adminMenu'),
-            'ship' => array('list','listAjax',  'adminMenu'),
-            'shop' => array('list','listAjax', 'adminMenu'),
-            'station' => array('list','listAjax', 'adminMenu')
+            'asteroid' => array('list','listAjax', 'adminMenu', 'details'),
+            'player' => array('list','listAjax', 'adminMenu', 'details'),
+            'ship' => array('list','listAjax',  'adminMenu', 'details'),
+            'shop' => array('list','listAjax', 'adminMenu', 'details'),
+            'station' => array('list','listAjax', 'adminMenu', 'details')
             
         ),
         'USER_ROLE_GUEST' => array(

@@ -39,12 +39,13 @@ Also You should change default admin password for ore secure (default is 'secret
 - ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
 - add option for local/remote server install admin authorisation for performing above tasks,
 - allow controlling doomsiders shadow via web GUI,
+- allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 
 
 # Future plans
 
 
-- allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
+
 - admin ranks for administrative users, with configurable restricted priviledges for each rank (permission system),
 - show more sophisticated stats live from starmade server (via doomsiders script), or at least update stats with configurable time interval,
 - SM server faliure reporting, and logging

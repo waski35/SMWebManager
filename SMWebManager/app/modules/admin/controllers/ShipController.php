@@ -23,7 +23,44 @@ class ShipController extends ControllerBase
         
     }
     
-    
+    public function detailsAction($line)
+    {
+        $logs = Ship::find(array(
+            "conditions" => "line = ?1",
+            "bind" =>  array(1 => $line)
+            ));
+        
+        if (!$logs)
+        {
+            $this->dispatcher->forward(array(
+                    "module"    => "admin",
+                    "controller" => "ship",
+                    "action"     => "list",
+                )
+                    );
+        }
+        if ($this->request->isPost())
+        {
+            $do_action = $this->request->getPost('do_action');
+            $logs_name = $logs->getFirst()->getName();
+            if ($do_action == "Despawn")
+            {
+                // perform action based off name
+                
+            }
+            else 
+            {
+                // do nothing
+            }
+        }
+        
+        
+        
+        
+        
+        $this->view->logs = $logs->getFirst();
+        
+    }
     
     
     
