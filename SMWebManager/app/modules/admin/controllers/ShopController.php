@@ -45,7 +45,7 @@ class ShopController extends ControllerBase
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                
+                exec($shadow_path."/shadow.dtsd dosafe destroy_uid ENTITY_SHOP_".$logs_name);
             }
             else 
             {

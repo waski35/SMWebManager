@@ -47,6 +47,7 @@ class AsteroidController extends ControllerBase
             {
                 // screen -p 0 -S smscreen -X stuff "$STUFFCOMMAND" -> w lokalnym wierszu polecen wyslac to to sreena dzlajacego na tym samym userze
                 // perform despawn based off name
+                exec($shadow_path."/shadow.dtsd dosafe despawn_all ".$logs_name." all false");
             }
             
         }

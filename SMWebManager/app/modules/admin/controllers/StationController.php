@@ -46,7 +46,7 @@ class StationController extends ControllerBase
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                
+                exec($shadow_path."/shadow.dtsd dosafe despawn_all ".$logs_name." all false");
             }
             else 
             {

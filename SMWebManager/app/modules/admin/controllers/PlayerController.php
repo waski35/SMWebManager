@@ -53,11 +53,11 @@ class PlayerController extends ControllerBase
             }
             else if ($do_action == 'Ban')
             {
-                
+                exec($shadow_path."/shadow.dtsd dosafe ban_account_by_playername ".$logs_name."'");
             }
             else if ($do_action == 'Kick')
             {
-                
+                exec($shadow_path."/shadow.dtsd dosafe kick_reason ".$logs_name. "'web admin panel kick'");
             }
             else if ($do_action == 'Rank Up')
             {
@@ -69,7 +69,7 @@ class PlayerController extends ControllerBase
             }
             else if ($do_action == 'Give Credits')
             {
-                
+                exec($shadow_path."/shadow.dtsd dosafe give_credits ".$logs_name. "1000000");
             }
             else 
             {
