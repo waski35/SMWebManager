@@ -58,12 +58,13 @@ class AdminController extends ControllerBase
                 "order" => "TIME DESC",
                 "limit" => 1
             ));
+        $shadow_path = $this->config->path_to_shadow;
             if ($do_action == 'kill')
             {
                 if ($lastServerStatus->getStatus() != 'Stopped' || $lastServerStatus->getStatus() != 'Kill')
                 {
                     // perform kill
-                    
+                    exec($shadow_path."/shadow.dtsd stop");
                 }
             }
             else if ($do_action == 'restart')
@@ -71,6 +72,7 @@ class AdminController extends ControllerBase
                 if ($lastServerStatus->getStatus() != 'Stopped' || $lastServerStatus->getStatus() != 'Kill')
                 {
                     // perform restart
+                    exec($shadow_path."/shadow.dtsd restart");
                     
                 }
             }
@@ -79,6 +81,7 @@ class AdminController extends ControllerBase
                 if ($lastServerStatus->getStatus() != 'Starting')
                 {
                     // perform start
+                    exec($shadow_path."/shadow.dtsd start");
                     
                 }
                 
@@ -88,6 +91,7 @@ class AdminController extends ControllerBase
                 if ($lastServerStatus->getStatus() != 'Starting')
                 {
                     // perform backup of universe
+                    exec($shadow_path."/shadow.dtsd universebackup");
                     
                 }
             }
@@ -96,7 +100,7 @@ class AdminController extends ControllerBase
                 if ($lastServerStatus->getStatus() != 'Starting')
                 {
                     // perform update server binaries
-                    
+                    exec($shadow_path."/shadow.dtsd download");
                 }
             }
             else if ($do_action == 'updateshdw')
@@ -104,6 +108,7 @@ class AdminController extends ControllerBase
                 if ($lastServerStatus->getStatus() != 'Starting')
                 {
                     // perform update shadow
+                    exec($shadow_path."/shadow.dtsd updateshadow");
                     
                 }
             }
