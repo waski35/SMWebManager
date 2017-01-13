@@ -17,7 +17,7 @@
                <thead>
                     
                     <th>line</th>
-                    <th>commands allowed</th>
+                    <th>commandsallowed</th>
                     <th>name</th>
                     
                </thead>
