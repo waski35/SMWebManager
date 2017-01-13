@@ -31,9 +31,12 @@ php composer.phar install
 # SMWM Configuration
 
 In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
+
 Also You should change default admin password for more secure (default is 'secret_admin_password', login 'admin').
 
-Warning ! Apache Web Server should be configured to run as the same user who owns and runs doomsiders shadow and starmade server - this is necessary SMWM to operate properly.
+Sending admin commands to starmade dedicated server requires 'path_to_shadow' config setting configured by putting there absolute system path to directory containing doomsiders shadow (shadow.dtsd script). Path should counatin only directories, excluding files. 
+
+Warning ! Apache Web Server should be configured to run as the same user who owns and runs doomsiders shadow and starmade server - this is necessary for SMWM to operate properly.
 This can be achieved by using official apache2-mpm-itk version, and by configuring sites virtual host to be served as said user.
 
 
