@@ -31,20 +31,22 @@ php composer.phar install
 # SMWM Configuration
 
 In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
-Also You should change default admin password for ore secure (default is 'secret_admin_password', login 'admin').
+Also You should change default admin password for more secure (default is 'secret_admin_password', login 'admin').
 
-Warning ! Apache Web Server should be configured to run as the same user who owns and runs doomsiders shadow and starmade server - for this SMWM to operate properly.
-This can be achieved by using official apache-mpm-itk version, and by configuring sites virtual host to be server as said user.
+Warning ! Apache Web Server should be configured to run as the same user who owns and runs doomsiders shadow and starmade server - this is necessary SMWM to operate properly.
+This can be achieved by using official apache2-mpm-itk version, and by configuring sites virtual host to be served as said user.
 
 
 # In Development ("-" schedeuled, "+" completed)
 
+- (+) allow controlling doomsiders shadow via web GUI,
+- (+) allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 - (+) ability to view, sort, search almost all data from game server that shadow gets.
 - (+) ability to show details about players, ships, stations, shops, asteroids on given list,
-- (-/+)ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, account, IP), unban, kick, teleport, set invincible, destroy, despawn, unset invincible, set decayed, unset decayed, reset core,
-- add option for local/remote server install admin authorisation for performing above tasks,
-- (-/+) allow controlling doomsiders shadow via web GUI,
-- (-/+) allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
+- (+) ability to perform actions at above objects such as : ban / unban player account, kick player, give 1 mil credits to player, despawn ships or stations, destroy Trading Guild shop
+- (-/+)ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, IP), teleport, set invincible, destroy, unset invincible, set decayed, unset decayed, reset core, restock full shop,
+
+
 
 
 # Future plans
