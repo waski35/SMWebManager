@@ -29,6 +29,8 @@ class ShopController extends ControllerBase
             "bind" =>  array(1 => $line)
             ));
         
+        $shadow_path = $this->config->path_to_shadow;
+        
         if (!$logs)
         {
             $this->dispatcher->forward(array(
@@ -45,7 +47,7 @@ class ShopController extends ControllerBase
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                
+                exec($shadow_path.'/shadow.dtsd dosafe "/destroy_uid ENTITY_SHOP_'.$logs_name.'"');
             }
             else 
             {
