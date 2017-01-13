@@ -46,7 +46,7 @@ This can be achieved by using official apache2-mpm-itk version, and by configuri
 - (+) allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
 - (+) ability to view, sort, search almost all data from game server that shadow gets.
 - (+) ability to show details about players, ships, stations, shops, asteroids on given list,
-- (+) ability to perform actions at above objects such as : ban / unban player account, kick player, give 1 mil credits to player, despawn ships or stations, destroy Trading Guild shop
+- (+) ability to perform actions at above objects such as : ban / unban player account, kick player, give 1 mil credits to player, despawn ships or stations, destroy shop, despawn asteroids
 - (-/+)ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, IP), teleport, set invincible, destroy, unset invincible, set decayed, unset decayed, reset core, restock full shop,
 
 
