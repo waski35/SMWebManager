@@ -49,15 +49,19 @@ class PlayerController extends ControllerBase
             if ($do_action == "Kill")
             {
                 // perform action based off name
+                exec("screen -p 0 -S smscreen -X stuff '/kill_character ".$logs_name."'"); // -> w lokalnym wierszu polecen wyslac to to sreena dzlajacego na tym samym userze
                 
             }
             else if ($do_action == 'Ban')
             {
-                exec($shadow_path."/shadow.dtsd dosafe ban_account_by_playername ".$logs_name."'");
+                //exec($shadow_path."/shadow.dtsd dosafe ban_account_by_playername ".$logs_name."'");
+                exec("screen -p 0 -S smscreen -X stuff '/ban_account_by_playername ".$logs_name."'");
+                
             }
             else if ($do_action == 'Kick')
             {
-                exec($shadow_path."/shadow.dtsd dosafe kick_reason ".$logs_name. "'web admin panel kick'");
+                //exec($shadow_path."/shadow.dtsd dosafe kick_reason ".$logs_name. "'web admin panel kick'");
+                exec("screen -p 0 -S smscreen -X stuff '/kick_reason ".$logs_name."'");
             }
             else if ($do_action == 'Rank Up')
             {
@@ -69,7 +73,8 @@ class PlayerController extends ControllerBase
             }
             else if ($do_action == 'Give Credits')
             {
-                exec($shadow_path."/shadow.dtsd dosafe give_credits ".$logs_name. "1000000");
+                //exec($shadow_path."/shadow.dtsd dosafe give_credits ".$logs_name. "1000000");
+                exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
             }
             else 
             {
