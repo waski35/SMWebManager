@@ -30,6 +30,8 @@ class ShipController extends ControllerBase
             "bind" =>  array(1 => $line)
             ));
         
+        $shadow_path = $this->config->path_to_shadow;
+        
         if (!$logs)
         {
             $this->dispatcher->forward(array(
@@ -46,7 +48,7 @@ class ShipController extends ControllerBase
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                exec($shadow_path."/shadow.dtsd dosafe despawn_all ".$logs_name." all true");
+                exec($shadow_path.'/shadow.dtsd dosafe "/despawn_all '.$logs_name.' all true"');
             }
             else 
             {

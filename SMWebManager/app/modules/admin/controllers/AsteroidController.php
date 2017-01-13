@@ -30,6 +30,8 @@ class AsteroidController extends ControllerBase
             "bind" =>  array(1 => $line)
             ));
         
+        $shadow_path = $this->config->path_to_shadow;
+        
         if (!$logs)
         {
             $this->dispatcher->forward(array(
@@ -47,7 +49,7 @@ class AsteroidController extends ControllerBase
             {
                 // screen -p 0 -S smscreen -X stuff "$STUFFCOMMAND" -> w lokalnym wierszu polecen wyslac to to sreena dzlajacego na tym samym userze
                 // perform despawn based off name
-                exec($shadow_path."/shadow.dtsd dosafe despawn_all ".$logs_name." all false");
+                exec($shadow_path.'/shadow.dtsd dosafe "/despawn_all '.$logs_name.' all false"');
             }
             
         }
