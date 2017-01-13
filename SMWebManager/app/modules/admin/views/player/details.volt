@@ -32,6 +32,7 @@
                    <tr><td>Last Update</td><td>{{ logs.getLastUpdate() }}</td></tr>
                    <tr><td>Kill Player Action</td><td><input type="submit" name="do_action" value="Kill" class="btn btn-md btn-warning"></td></tr>
                    <tr><td>Ban Player Action</td><td><input type="submit" name="do_action" value="Ban" class="btn btn-md btn-danger"></td></tr>
+                   <tr><td>UnBan Player Action</td><td><input type="submit" name="do_action" value="Unban" class="btn btn-md btn-success"></td></tr>
                    <tr><td>Kick Player Action</td><td><input type="submit" name="do_action" value="Kick" class="btn btn-md btn-warning"></td></tr>
                    <tr><td>Give 1 mil Credits to Player Action</td><td><input type="submit" name="do_action" value="Give Credits" class="btn btn-md btn-info"></td></tr>
                    <tr><td>Rank Up Player Action</td><td><input type="submit" name="do_action" value="Rank Up" class="btn btn-md btn-success"></td></tr>

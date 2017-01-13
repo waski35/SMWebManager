@@ -79,6 +79,11 @@ class PlayerController extends ControllerBase
                 exec($shadow_path.'/shadow.dtsd dosafe "/give_credits '.$logs_name. ' 1000000"');
                 //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
             }
+            else if ($do_action == 'Unban')
+            {
+                exec($shadow_path.'/shadow.dtsd dosafe "/unban_account '.$logs_name.'"');
+                //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
+            }
             else 
             {
                 // do nothing
