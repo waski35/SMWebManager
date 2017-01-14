@@ -23,6 +23,7 @@
                    <tr><td>Name</td><td>{{ logs.getName() }}</td></tr>
                    <tr><td>Current Sector</td><td>{{ logs.getCurrentSector() }}</td></tr>
                    <tr><td>Despawn Shop Action</td><td><input type="submit" name="do_action" value="Despawn" class="btn btn-md btn-warning"></td></tr>
+                   <tr><td>Shop Restock Full</td><td><input type="submit" name="do_action" value="Restock Full" class="btn btn-md btn-info"></td></tr>
                    
                    {{ end_form ()}}    
                </tbody>
