@@ -42,22 +42,14 @@ This can be achieved by using official apache2-mpm-itk version, and by configuri
 
 # In Development ("-" schedeuled, "+" completed)
 
-- (+) allow controlling doomsiders shadow via web GUI,
-- (+) allow start/stop/restart doomsiders shadow and connected star made dedicated server via web GUI,
-- (+) ability to view, sort, search almost all data from game server that shadow gets.
-- (+) ability to show details about players, ships, stations, shops, asteroids on given list,
-- (+) ability to perform actions at above objects such as : ban / unban player account, kick player, give 1 mil credits to player, despawn ships or stations, destroy shop, despawn asteroids
-- (-/+)ability to perform actions at above objects such as : rank up, rank down, edit credits, edit bank account, ban (playername, IP), teleport, set invincible, destroy, unset invincible, set decayed, unset decayed, reset core, restock full shop,
+See Project details : https://github.com/waski35/SMWebManager/projects/1
 
 
 
 
 # Future plans
 
-- admin ranks for administrative users, with configurable restricted priviledges for each rank (permission system),
-- show more sophisticated stats live from starmade server (via doomsiders script), or at least update stats with configurable time interval,
-- SM server faliure reporting, and logging
-- keep everything in database (preferably MySQL)
+See Project details : https://github.com/waski35/SMWebManager/projects/1
 
 # Development Branch naming and usage
 
