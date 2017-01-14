@@ -116,6 +116,9 @@
                                 <li>
                                     <a href="{{url(['for': 'admin-smranks'])}}"><i class="fa fa-dashboard fa-fw"></i>Ranks Logs</a>
                                 </li>
+                                <li>
+                                    <a href="{{url(['for': 'admin-chatlogs'])}}"><i class="fa fa-dashboard fa-fw"></i>Chat Logs</a>
+                                </li>
                             </ul>
                         <li>
                             
