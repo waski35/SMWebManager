@@ -45,8 +45,6 @@ This can be achieved by using official apache2-mpm-itk version, and by configuri
 See Project details : https://github.com/waski35/SMWebManager/projects/1
 
 
-
-
 # Future plans
 
 See Project details : https://github.com/waski35/SMWebManager/projects/1

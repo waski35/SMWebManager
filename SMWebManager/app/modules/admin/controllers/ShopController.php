@@ -51,7 +51,7 @@ class ShopController extends ControllerBase
             }
             else if ($do_action == "Restock Full")
             {
-                exec($shadow_path.'/shadow.dtsd dosafe "/shop_restock_full_uid ENTITY_SHOP_-'.$logs_name.'"');
+                exec($shadow_path.'/shadow.dtsd dosafe "/shop_restock_full_uid ENTITY_SHOP_'.$logs_name.'"');
                 
             }
             else 
