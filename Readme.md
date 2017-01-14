@@ -18,7 +18,15 @@ This software is licensed under GNU GPL 2 license. For terms see : https://www.g
 
 # Installation
 
-After installing project dependencies You need install web application configured dependencies by executing below commands in web app directory in linux shell :
+After installing above dependencies...
+
+Download contents of SMWM repository (as below using git clone command) to shadow directory
+
+```sh
+git clone https://github.com/waski35/SMWebManager.git
+
+```
+Now you need to install web application configured dependencies by executing below commands in web app directory in linux shell :
 
 ```sh
 
