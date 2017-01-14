@@ -20,7 +20,6 @@
                     <th>name</th>
                     <th>status</th>
                     <th>time</th>
-                    <th>action</th>
                 </thead>
                <tbody>
                    
