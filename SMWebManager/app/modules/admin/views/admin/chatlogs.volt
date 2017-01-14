@@ -6,7 +6,7 @@
         <div id="page-wrapper" style="min-height: 650px;">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Admin Logs</h1>
+                        <h1 class="page-header">Chat Logs</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>

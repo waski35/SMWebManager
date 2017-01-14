@@ -47,7 +47,7 @@ return new \Phalcon\Config(array(
     // ACL - permission system for roles defined in application - You can safely add new ones ie. 'USER_ROLE_SUPERADMIN' is role, 'admin' is controller, 'index' is (among others action (page))
     'permissions' => array(
         'USER_ROLE_SUPERADMIN' => array(
-            'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage','serversettings',  'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax', 'adminMenu'),
+            'admin' => array('index', 'adminlogs', 'adminlogsAjax', 'bounties', 'bountiesAjax', 'connections','connectionsAjax', 'destroylog','destroylogAjax', 'kills', 'killsAjax', 'logs', 'logsAjax', 'sectors', 'sectorsAjax', 'servermanage','serversettings',  'serverstatus', 'serverstatusAjax', 'smranks', 'smranksAjax', 'votes', 'votesAjax','chatlogs', 'chatlogsAjax', 'adminMenu'),
             'index' => array('index', 'login','logout', 'notfound'),
             'asteroid' => array('list','listAjax', 'adminMenu', 'details'),
             'player' => array('list','listAjax', 'adminMenu', 'details'),
