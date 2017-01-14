@@ -48,7 +48,7 @@ class ShipController extends ControllerBase
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                exec($shadow_path.'/shadow.dtsd dosafe "/despawn_all '.$logs_name.' all true"');
+                exec('screen -p 0 -S smscreen -X stuff "/despawn_all \''.$logs_name.'\' all false"\'\n\'');
             }
             else 
             {

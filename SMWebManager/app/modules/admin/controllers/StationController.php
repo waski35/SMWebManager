@@ -45,10 +45,15 @@ class StationController extends ControllerBase
         {
             $do_action = $this->request->getPost('do_action');
             $logs_name = $logs->getFirst()->getName();
+            
             if ($do_action == "Despawn")
             {
                 // perform action based off name
-                exec($shadow_path.'/shadow.dtsd dosafe "/despawn_all '.$logs_name.' all false"');
+                //exec($shadow_path.'/shadow.dtsd dosafe "/despawn_all "'.$logs_name.'" all false"');
+                exec('screen -p 0 -S smscreen -X stuff "/despawn_all \''.$logs_name.'\' all false"\'\n\'');
+
+                //screen -p 0 -S smscreen -X stuff "/despawn_all \''.$logs_name.'\' all false"$(printf \\r)
+
             }
             else
             {
