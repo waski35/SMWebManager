@@ -3,6 +3,7 @@
 namespace SMWebManager\Modules\Admin\Controllers;
 
 use SMWebManager\Modules\Admin\Models\Player;
+use SMWebManager\Modules\Admin\Models\SmRank;
 
 class PlayerController extends ControllerBase
 {
@@ -66,17 +67,33 @@ class PlayerController extends ControllerBase
                 exec($shadow_path.'/shadow.dtsd dosafe "/kick_reason '.$logs_name. ' kick"');
                 //exec("screen -p 0 -S smscreen -X stuff '/kick_reason ".$logs_name."'");
             }
-            else if ($do_action == 'Rank Up')
+            else if ($do_action == 'Save')
             {
+                $newRank = $this->request->getPost('rank');
                 
-            }
-            else if ($do_action == 'Rank Down')
-            {
-                
+                if (in_array($newRank, $this->getRanks()))
+                {
+                    exec($shadow_path.'/shadow.dtsd changerank '.$logs_name. ' '.$newRank);
+                }
             }
             else if ($do_action == 'Give Credits')
             {
                 exec($shadow_path.'/shadow.dtsd dosafe "/give_credits '.$logs_name. ' 1000000"');
+                //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
+            }
+            else if ($do_action == 'Set Invincible')
+            {
+                exec($shadow_path.'/shadow.dtsd dosafe "/god_mode '.$logs_name. ' true"');
+                //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
+            }
+            else if ($do_action == 'UnSet Invincible')
+            {
+                exec($shadow_path.'/shadow.dtsd dosafe "/god_mode '.$logs_name. ' false"');
+                //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
+            }
+            else if ($do_action == 'Whitelist')
+            {
+                exec($shadow_path.'/shadow.dtsd dosafe "/whitelist_name '.$logs_name.'"');
                 //exec("screen -p 0 -S smscreen -X stuff '/give_credits ".$logs_name." 1000000'");
             }
             else if ($do_action == 'Unban')
@@ -88,6 +105,10 @@ class PlayerController extends ControllerBase
             {
                 // do nothing
             }
+            $logs = Player::find(array(
+            "conditions" => "line = ?1",
+            "bind" =>  array(1 => $line)
+            ));
         }
         
         
@@ -95,9 +116,27 @@ class PlayerController extends ControllerBase
         
         
         $this->view->logs = $logs->getFirst();
+        $this->view->ranks = $this->getRanks();
         
     }
     
+    protected function getRanks()
+    {
+        $ranks = SmRank::find();
+        
+        if ($ranks == null)
+        {
+            return null;
+        }
+
+        $rankNames = array();
+        foreach($ranks as $rank)
+        {
+            $rankNames[] = $rank->getName();
+        }
+        
+        return $rankNames;
+    }
     
     
     

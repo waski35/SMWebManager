@@ -36,6 +36,25 @@
         
         
     <script>
+        
+            $(document).ready(function() {
+                $('#chatlogsLog').DataTable({
+                    serverSide: true,
+                    ajax: {
+                        url: '/admin/chatlogsAjax',
+                        method: 'POST'
+                    },
+                    columns: [
+                        {data: 'line', searchable: false},
+                        {data: 'CHATSTRING'},
+                        {data: 'LOGDATE'},
+                        {data: 'RECIEVER'},
+                        {data: 'SENDER'}
+                        
+                        
+
+                    ]
+                });});
             $(document).ready(function() {
                 $('#connLog').DataTable({
                     serverSide: true,
@@ -47,15 +66,9 @@
                         {data: 'line', searchable: false},
                         {data: 'IP'},
                         {data: 'NAME'},
-                        {data: 'STATUS', searchable: false},
-                        {data: 'TIME'},
-                        {
-                            targets: 5,
-                            data: 'line',
-                            render: function ( data, type, full, meta ) {
-                                    return "<a href='/admin/connections/details/"+data+"'>Details</a>";
-                                        }
-                        }
+                        {data: 'STATUS'},
+                        {data: 'TIME'}
+                        
                     ]
                 });});
             
@@ -70,7 +83,7 @@
                         {data: 'line', searchable: false},
                         {data: 'TYPE'},
                         {data: 'NAME'},
-                        {data: 'DESTROYTIME', searchable: false}
+                        {data: 'DESTROYTIME'}
                         
                         
                     ]

@@ -27,8 +27,7 @@
                    <tr><td>Block</td><td>{{ logs.getBlock() }}</td></tr>
                    <tr><td>Creator</td><td>{{ logs.getCreator() }}</td></tr>
                    <tr><td>Despawn Station Action</td><td><input type="submit" name="do_action" value="Despawn" class="btn btn-md btn-warning"></td></tr>
-                   <tr><td>Set Decayed Station Action</td><td><input type="submit" name="do_action" value="Set Decayed" class="btn btn-md btn-warning"></td></tr>
-                   <tr><td>Set Undecayed Station Action</td><td><input type="submit" name="do_action" value="Set Undecayed" class="btn btn-md btn-warning"></td></tr>
+                   {#<tr><td>UnSet/Set Invincible</td><td><input type="submit" name="do_action" value="Set Invincible" class="btn btn-md btn-warning"><input type="submit" name="do_action" value="UnSet Invincible" class="btn btn-md btn-warning"></td></tr> #}
                    {{ end_form ()}}    
                </tbody>
                

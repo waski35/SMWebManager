@@ -110,6 +110,12 @@ $router->add('/admin/serversettings', array (
     'action' => 'serversettings'
 ))->setName('admin-server-settings');
 
+$router->add('/admin/chatlog', array(
+   'module' => 'admin',
+   'controller' => 'admin',
+   'action' => 'chatlogs'
+))->setName('admin-chatlogs');
+
 // asteroids
 
 $router->add('/admin/asteroid/list', array(

@@ -13,6 +13,7 @@ use SMWebManager\Modules\Admin\Models\Bounty;
 use SMWebManager\Modules\Admin\Models\Kills;
 use SMWebManager\Modules\Admin\Models\Vote;
 use SMWebManager\Modules\Admin\Models\Player;
+use SMWebManager\Modules\Admin\Models\ChatLog;
 
 
 class AdminController extends ControllerBase
@@ -261,6 +262,26 @@ class AdminController extends ControllerBase
         }
         
     }        
+    
+    public function chatlogsAction()
+    {
+        
+    }
+       
+    
+    public function chatlogsAjaxAction()
+    {
+        if ($this->request->isAjax()) {
+            $logs = ChatLog::find();
+            
+        //    $this->view->adminlogs = $logs;
+            $dataTables = new \DataTables\DataTable();
+            $dataTables->fromResultSet($logs)->sendResponse();
+            
+        }
+        
+    }       
+    
     
     public function bountiesAction()
     {

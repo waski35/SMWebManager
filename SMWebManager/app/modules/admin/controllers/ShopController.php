@@ -49,6 +49,11 @@ class ShopController extends ControllerBase
                 // perform action based off name
                 exec($shadow_path.'/shadow.dtsd dosafe "/destroy_uid ENTITY_SHOP_'.$logs_name.'"');
             }
+            else if ($do_action == "Restock Full")
+            {
+                exec($shadow_path.'/shadow.dtsd dosafe "/shop_restock_full_uid ENTITY_SHOP_-'.$logs_name.'"');
+                
+            }
             else 
             {
                 // do nothing

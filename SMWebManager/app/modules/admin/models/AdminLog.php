@@ -39,7 +39,7 @@ class AdminLog extends Model
     public function getTime()
     {
         return $this->TIME;
-;
+
     }
 }
 

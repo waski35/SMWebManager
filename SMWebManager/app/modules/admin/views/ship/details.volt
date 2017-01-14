@@ -29,7 +29,7 @@
                    <tr><td>Last Update</td><td>{{ logs.getLastUpdate() }}</td></tr>
                    <tr><td>Mass</td><td>{{ logs.getMass() }}</td></tr>
                    <tr><td>Despawn Ship Action</td><td><input type="submit" name="do_action" value="Despawn" class="btn btn-md btn-warning"></td></tr>
-                   <tr><td>Reset Core Station Action</td><td><input type="submit" name="do_action" value="Reset Core" class="btn btn-md btn-warning"></td></tr>
+                   {#<tr><td>Reset Core Station Action</td><td><input type="submit" name="do_action" value="Reset Core" class="btn btn-md btn-warning"></td></tr>#}
                    {{ end_form ()}}    
                </tbody>
                
