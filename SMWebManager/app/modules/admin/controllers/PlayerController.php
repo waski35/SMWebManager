@@ -105,6 +105,10 @@ class PlayerController extends ControllerBase
             {
                 // do nothing
             }
+            $logs = Player::find(array(
+            "conditions" => "line = ?1",
+            "bind" =>  array(1 => $line)
+            ));
         }
         
         
