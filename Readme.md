@@ -31,10 +31,18 @@ Now you need to install web application configured dependencies by executing bel
 ```sh
 
 npm install
-bower install
+npm install -g bower
+bower install [--allow-root] 
 php composer.phar install
 
 ```
+"npm install -g bower" - this will install bower globally (usefull sometimes)
+"--allow-root" switch is for installing bower managed dependensies as root. Remember to chown it and chmod it to starmade user later.
+```sh
+chown -R starmade:starmade /home/starmade/starmade/SMWebManager
+chmod -R 0777 /home/starmade/starmade/SMWebManager
+```
+This is fastest way to set it up, however not the most secure one. Mostly "/cache" directory in web app root needs to be writable by Apache and PHP.
 
 # SMWM Configuration
 
