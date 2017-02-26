@@ -7,57 +7,45 @@ SMWM is a tool for Starmade Dedicated server's admins using doomsiders shadow to
 This software is licensed under GNU GPL 2 license. For terms see : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 
-# Dependencies
-
-- doomsider's shadow (with all its dependencies, working) - https://github.com/doomsider/shadow (follow its install instructions)
-
+Server software :
 - Apache 2.4
-- PHP 5.5
-- Phalcon 3.0.* PHP Framework (install instruction : https://docs.phalconphp.com/en/latest/reference/install.html)
-- npm, nodejs, php composer (to install project javascript / php  dependencies)
+- php 5.5 to 7.0
+- Mysql Server 5.5
+- php5-intl (module for php5 -> "apt-get install php5-intl) - its required for symfony framework to work
+- apache2-mpm-itk module installed and enabled (for running web application as user that runs doomsider shadow - see apache2 documentation how to set user as owner of apache instance runing this app in virtual host configuration file)
+- Phalcon PHP Framework 3.0.* (install instruction : https://docs.phalconphp.com/en/latest/reference/install.html)
+
+Libs :
+* doomsider shadow bash script, and set up database for it (for install instructions for this, see doomsider repository install instructions -> https://github.com/doomsider/shadow)
+
+Package Managers : 
+- composer
+- nodejs, npm
+- bower
+
+* doomsider shadow bash script, and set up database for it (for install instruction for this see doomsider repository install instructions -> https://github.com/doomsider/shadow)
+
+Tested on Ubuntu 14.04 LTS, 16.04.LTS
 
 
-Type this to install package managers for web :
-```sh
-sudo apt-get install nodejs
-sudo apt-get install npm
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '55d6ead61b29c7bdee5cccfb50076874187bd9f21f65d8991d46ec5cc90518f447387fb9f76ebae1fbbacf329e583e30') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-```
+Install insttructions :
+- Install serwer software mentioned above,
+- Download this package ("git clone https://github.com/waski35/SMWebManager.git /var/www/SMWebManager");
+- Install nodejs ("sudo apt-get install nodejs"),
+- Install npm ("sudo apt-get install npm"),
+- Install bower ("sudo npm install -g bower"),
+- Navigate to /var/www/SMWebManager ("cd /var/www/SMWebManager"),
+- Install composer in local directory (https://getcomposer.org/download/) ie. /var/www/SMWebManager or other web directory form where this page will be served by apache 2
+- Install symfony 2.8 with composer "php composer.phar install" <- call this in /var/www/SMWebManager
+- wait for composer to install dependencies,
+- Install project dependencies with bower ("bower install") or ("bower install --allow-root") if running on root account,
+  - if you get error that node has not been found install nodejs-legacy ("sudo apt-get install nodejs-legacy") to fix package naming issues on debian/ubuntu
 
-# Installation
 
-After installing above dependencies...
-
-Download contents of SMWM repository (as below using git clone command) to shadow directory
-
-```sh
-git clone https://github.com/waski35/SMWebManager.git
-
-```
-Now you need to install web application configured dependencies by executing below commands in web app directory in linux shell :
-
-```sh
-
-npm install
-npm install -g bower
-bower install [--allow-root] 
-php composer.phar install
-
-```
-"npm install -g bower" - this will install bower globally (usefull sometimes)
-"--allow-root" switch is for installing bower managed dependensies as root. Remember to chown it and chmod it to starmade user later.
-```sh
-chown -R starmade:starmade /home/starmade/starmade/SMWebManager
-chmod -R 0777 /home/starmade/starmade/SMWebManager
-```
-This is fastest way to set it up, however not the most secure one. Mostly "/cache" directory in web app root needs to be writable by Apache and PHP.
 
 # SMWM Configuration
 
-In app's "/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
+In app's "/var/www/SMWebManager/app/config/config.php" file in database connection section you should put connection parameters for doomsider's database, so web app can connect to datasource.
 
 Also You should change default admin password for more secure (default is 'secret_admin_password', login 'admin').
 
