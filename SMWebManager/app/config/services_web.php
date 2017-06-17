@@ -75,11 +75,21 @@ $di->setShared( "dispatcher",
             new SecurityPlugin()
         );
 
-        // Handle exceptions and not-found exceptions using NotFoundPlugin
-        //$eventsManager->attach(
-        //    "dispatch:beforeException",
-        //    new NotFoundPlugin()
-        //);
+        $eventsManager->attach("dispatch", function($event, $dispatcher, $exception) {
+          
+        if ($event->getType() == 'beforeException') {
+        switch ($exception->getCode()) {
+            case Phalcon\Dispatcher::EXCEPTION_HANDLER_NOT_FOUND:
+            case Phalcon\Dispatcher::EXCEPTION_ACTION_NOT_FOUND:
+               $dispatcher->forward(array(
+                  'module' => 'admin',
+                   'controller' => 'index',
+                   'action' => 'index'
+               ));
+               return false;
+              }
+          }
+        });
 
         $dispatcher = new Dispatcher();
 
