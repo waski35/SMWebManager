@@ -36,7 +36,7 @@ Install insttructions :
 - Install bower ("sudo npm install -g bower"),
 - Navigate to /var/www/SMWebManager ("cd /var/www/SMWebManager"),
 - Install composer in local directory (https://getcomposer.org/download/) ie. /var/www/SMWebManager or other web directory form where this page will be served by apache 2
-- Install symfony 2.8 with composer "php composer.phar install" <- call this in /var/www/SMWebManager
+- Install composer managed dependencies "php composer.phar install" <- call this in /var/www/SMWebManager
 - wait for composer to install dependencies,
 - Install project dependencies with bower ("bower install") or ("bower install --allow-root") if running on root account,
   - if you get error that node has not been found install nodejs-legacy ("sudo apt-get install nodejs-legacy") to fix package naming issues on debian/ubuntu
