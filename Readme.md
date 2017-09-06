@@ -66,7 +66,7 @@ See Project details : https://github.com/waski35/SMWebManager/projects/1
 
 # Development Branch naming and usage
 
-Currently dev branch is dedicated to on-going developent and is considered much less stable than master branch which is dedicated to give more stable expirience in use of this software.
+Currently dev branch is dedicated to on-going developent and is considered much less stable than master branch which is dedicated to give more stable experience in use of this software.
 
 For fixing particular issues there are branches containing fix for given issue (name of this branch is number if issue). 
 
