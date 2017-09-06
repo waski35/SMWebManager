@@ -76,6 +76,7 @@ class IndexController extends ControllerBase
     {
         
         $this->flashsession->success("Logged off successfully");
+        $this->_unRegisterSession();
         $this->response->redirect(array("for" => "index"));
         
         
