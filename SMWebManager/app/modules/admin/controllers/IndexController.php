@@ -54,6 +54,7 @@ class IndexController extends ControllerBase
                 {
                 
                     $this->_registerSession($user);
+                    $this->flashsession->success("Logged in successfully");
                     $this->response->redirect(array("for" => "admin-index"));  
                 }
                 
@@ -76,7 +77,7 @@ class IndexController extends ControllerBase
         
         $this->flashsession->success("Logged off successfully");
         $this->response->redirect(array("for" => "index"));
-        $this->session->destroy();
+        
         
     }
     
@@ -93,6 +94,11 @@ class IndexController extends ControllerBase
                 "role" => $user['role']
             )
         );
+    }
+    protected function _unRegisterSession()
+    {
+        $this->session->remove("auth");
+        
     }
 
 }
