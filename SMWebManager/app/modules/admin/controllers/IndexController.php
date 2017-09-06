@@ -41,12 +41,14 @@ class IndexController extends ControllerBase
                     else 
                     {
                         $this->flashsession->warning("You don't have permissions to access admin panel.");
+                        $this->response->redirect(array("for" => "index"));
                     }
                 
                 }
                 else 
                 {
                     $this->flashsession->warning("Login / Password incorrect !");
+                    $this->response->redirect(array("for" => "index")); 
                 }
                 if ($user !== false) 
                 {
@@ -71,9 +73,10 @@ class IndexController extends ControllerBase
     
     public function logoutAction()
     {
-        $this->session->destroy();
-        $this->response->redirect(array("for" => "index"));
+        
         $this->flashsession->success("Logged off successfully");
+        $this->response->redirect(array("for" => "index"));
+        $this->session->destroy();
         
     }
     

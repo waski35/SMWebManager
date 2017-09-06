@@ -30,7 +30,7 @@
 
         <div id="wrapper">
                 
-
+            <div>{{ flashsession.output() }} </div>
             {% block content %} {% endblock %}
         </div>
         
