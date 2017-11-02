@@ -10,3 +10,8 @@ SMWebManager/vendor/*
 SMWebManager/app/config/config.php
 SMWebManager.zip
 SMWebManager.zip.tmp
+.idea/dbnavigator.xml
+.idea/modules.xml
+.idea/starmadeWebManagerP.iml
+.idea/vcs.xml
+.idea/workspace.xml
